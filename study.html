@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>간단한 지도 표시하기</title>
+    <script type="text/javascript"
+        src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=6vjrgbza9u&submodules=geocoder"></script>
+    <link type="text/css" rel="stylesheet" href="study.css">
+</head>
+
+<body>
+    <!-- 자치구별 점포 찾기 -->
+    <nav class="nav">
+        <div id="search">
+            <!-- 자치구 설정 콤보박스 -->
+            <select name="Gu">
+                <option value="0">자치구를 선택하세요.</option>
+                <option value="1">종로구</option>
+                <option value="2">중구</option>
+                <option value="3">용산구</option>
+                <option value="4">성동구</option>
+                <option value="5">광진구</option>
+                <option value="6">동대문구</option>
+                <option value="7">중랑구</option>
+                <option value="8">성북구</option>
+                <option value="9">강북구</option>
+                <option value="10">도봉구</option>
+                <option value="11">노원구</option>
+                <option value="12">은평구</option>
+                <option value="13">서대문구</option>
+                <option value="14">마포구</option>
+                <option value="15">양천구</option>
+                <option value="16">강서구</option>
+                <option value="17">구로구</option>
+                <option value="18">금천구</option>
+                <option value="19">영등포구</option>
+                <option value="20">동작구</option>
+                <option value="21">관악구</option>
+                <option value="22">서초구</option>
+                <option value="23">강남구</option>
+                <option value="24">송파구</option>
+                <option value="25">강동구</option>
+            </select>
+            <br>
+            <!-- 점포명 검색 -->
+            <label>
+                점포명 검색
+                <input type="text" size="15" value="" placeholder="점포명을 입력해주세요.">
+                <!-- 이후 리스너 달아서 리턴해줄 버튼 -->
+                <input type="submit" value="제출">
+            </label>
+        </div>
+        <!-- 검색 결과 -->
+        <div id="searchresult">
+
+        </div>
+    </nav>
+
+<!-- 점포 상세내용 -->
+    <section class="section">
+        <div id="shop">
+            <!-- 점포별 메인사진 -->
+            <img id="shopphoto" src="media/구글 Chrome.png">
+            <br>
+
+            <!-- 점포 상세 단축 메뉴 -->
+            <div id="menu">
+                <!-- 하이퍼링크로 연결해 클릭 시, 촤라락 스크롤하며 위치로 -->
+                <input type="button" value="홈">
+                <input type="button" value="품목">
+                <input type="button" value="리뷰">
+            </div>
+
+            <br>
+            <div id="shophome">
+                주소
+                전화번호
+            </div>
+            <br>
+            <div id="itemlist">
+                판매 품목 사진
+
+            </div>
+            <br>
+            <div id="reivew">
+                시장 후기
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 지도 출력 -->
+    <aside class="aside">
+        <div id="map" style="width:70%;height:100%;"></div>
+    </aside>
+
+    <!-- 아래 코드는 예제! -->
+    <!-- https://navermaps.github.io/maps.js.ncp/docs/tutorial-3-geocoder-geocoding.example.html -->
+    <script>
+        var map = new naver.maps.Map("map", {
+            center: new naver.maps.LatLng(37.4960591, 126.9514823),
+            zoom: 16,
+            mapTypeControl: true
+        });
+
+        var infoWindow = new naver.maps.InfoWindow({
+            anchorSkew: true
+        });
+
+        map.setCursor('pointer');
+
+        function searchCoordinateToAddress(latlng) {
+
+            infoWindow.close();
+
+            naver.maps.Service.reverseGeocode({
+                coords: latlng,
+                orders: [
+                    naver.maps.Service.OrderType.ADDR,
+                    naver.maps.Service.OrderType.ROAD_ADDR
+                ].join(',')
+            }, function (status, response) {
+                if (status === naver.maps.Service.Status.ERROR) {
+                    if (!latlng) {
+                        return alert('ReverseGeocode Error, Please check latlng');
+                    }
+                    if (latlng.toString) {
+                        return alert('ReverseGeocode Error, latlng:' + latlng.toString());
+                    }
+                    if (latlng.x && latlng.y) {
+                        return alert('ReverseGeocode Error, x:' + latlng.x + ', y:' + latlng.y);
+                    }
+                    return alert('ReverseGeocode Error, Please check latlng');
+                }
+
+                var address = response.v2.address,
+                    htmlAddresses = [];
+
+                if (address.jibunAddress !== '') {
+                    htmlAddresses.push('[지번 주소] ' + address.jibunAddress);
+                }
+
+                if (address.roadAddress !== '') {
+                    htmlAddresses.push('[도로명 주소] ' + address.roadAddress);
+                }
+
+                infoWindow.setContent([
+                    '<div style="padding:10px;min-width:200px;line-height:150%;">',
+                    '<h4 style="margin-top:5px;">검색 좌표</h4><br />',
+                    htmlAddresses.join('<br />'),
+                    '</div>'
+                ].join('\n'));
+
+                infoWindow.open(map, latlng);
+            });
+        }
+
+        function searchAddressToCoordinate(address) {
+            naver.maps.Service.geocode({
+                query: address
+            }, function (status, response) {
+                if (status === naver.maps.Service.Status.ERROR) {
+                    if (!address) {
+                        return alert('Geocode Error, Please check address');
+                    }
+                    return alert('Geocode Error, address:' + address);
+                }
+
+                if (response.v2.meta.totalCount === 0) {
+                    return alert('No result.');
+                }
+
+                var htmlAddresses = [],
+                    item = response.v2.addresses[0],
+                    point = new naver.maps.Point(item.x, item.y);
+
+                if (item.roadAddress) {
+                    htmlAddresses.push('[도로명 주소] ' + item.roadAddress);
+                }
+
+                if (item.jibunAddress) {
+                    htmlAddresses.push('[지번 주소] ' + item.jibunAddress);
+                }
+
+                if (item.englishAddress) {
+                    htmlAddresses.push('[영문명 주소] ' + item.englishAddress);
+                }
+
+                infoWindow.setContent([
+                    '<div style="padding:10px;min-width:200px;line-height:150%;">',
+                    '<h4 style="margin-top:5px;">검색 주소 : ' + address + '</h4><br />',
+                    htmlAddresses.join('<br />'),
+                    '</div>'
+                ].join('\n'));
+
+                map.setCenter(point);
+                infoWindow.open(map, point);
+            });
+        }
+
+        function initGeocoder() {
+            if (!map.isStyleMapReady) {
+                return;
+            }
+
+            map.addListener('click', function (e) {
+                searchCoordinateToAddress(e.coord);
+            });
+
+            $('#address').on('keydown', function (e) {
+                var keyCode = e.which;
+
+                if (keyCode === 13) { // Enter Key
+                    searchAddressToCoordinate($('#address').val());
+                }
+            });
+
+            $('#submit').on('click', function (e) {
+                e.preventDefault();
+
+                searchAddressToCoordinate($('#address').val());
+            });
+
+            searchAddressToCoordinate('정자동 178-1');
+        }
+
+        naver.maps.onJSContentLoaded = initGeocoder;
+        naver.maps.Event.once(map, 'init_stylemap', initGeocoder);
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+/* study.css */
+/* csss를 제대로 만지지는 않았습니다아... */
+html, body { margin: 0; padding: 10px; height: 100%; }
+.nav{width:20%; height: 100%; float: left;}
+.section{width:20%; height: 100%; float: left;}
+.aside{width:60%; height: 100%; float: left;}
+#shopphoto{width:100px; height: 100px; margin-left: auto; margin-right: auto; display: block;}
+#shopdata{margin-left: auto; margin-right: auto;}

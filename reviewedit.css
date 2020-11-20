@@ -1,0 +1,8 @@
+/* reviewedit.css */
+/* 아직 css는 손도 못댔습니다아... */
+html, body { margin: 0; padding: 10px; height: 100%; }
+#reviewshopname{width:20%; height: 100%;}
+#reviewpoint{width:20%; height: 100%;}
+#reviewphoto{width:20%; height: 100%;}
+#reviewdate{width:20%; height: 100%;}
+#review{width:20%; height: 100%;}

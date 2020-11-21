@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시장통</title>
+    <!-- css 파일 링크 -->
+    <link rel="stylesheet" href="./main.css">
+    <!-- 폰트형 아이콘 링크 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- 구글 웹폰트 링크 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=East+Sea+Dokdo&family=Nanum+Gothic:wght@400;700&family=Yeon+Sung&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- main menu -->
+    <div class="header clearfix">
+        <nav id="topMenu">
+            <a href="#"><img src="./image/logo.png" alt="logo" class="homeIcon"></a>
+            <ul>
+                <li><a class="menuLink" href="#">점포 찾기</a></li>
+                <li><a class="menuLink" href="#">상품 찾기</a></li>
+                <li><a class="menuLink" href="#">시장 후기</a></li>
+                <li><a class="menuLink" href="#">시장 홍보</a></li>
+                <li><a class="menuLink" href="#">My Page</a></li>
+            </ul>
+        </nav>
+    </div>
+    <hr id="menuUnderBar">
+    <!-- main 주요 정보 배치 -->
+    <main class="horizon-conatiner">
+        <!-- main 화면의 오른쪽 사이드 바 제외한 모든 부분 -->
+        <section class="mainHome">
+            <div class="horizon-conatiner">
+                <!-- 지도 삽입 -->
+                <div class="map">
+                    <img src="./image/map.png" alt="seoulMap" width="500px">
+                </div>
+                <div class="vertical-container">
+                    <!-- 명예의 전당 -->
+                    <div class="marketRank">
+                        <img src="./image/myeongye.png" alt="Ranking" id="myeongye">
+                        <ol>
+                            <li id="first">동작구 성대시장 단미당</li>
+                            <li id="second">종로구 광장시장 육회자매</li>
+                            <li id="third">마포구 망원시장 교동닭강정</li>
+                        </ol>
+                    </div>
+                    <!-- 우리동네 전통시장 검색 -->
+                    <div class="marketSearch">
+                        <p>지금 바로 우리동네 전통시장을 만나보세요</p>
+                        <div class="search">
+                            <input type="search" name="marketSearchQ" id="marketSearchQ" placeholder="우리동네 시장을 검색하세요">
+                            <button type="submit" class="searchButton">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                        <!-- 자치구 드롭다운 선택 -->
+                        <select name="region" id="region">
+                            <option value="">자치구</option>
+                            <option value="강남구">강남구</option>
+                            <option value="강동구">강동구</option>
+                            <option value="강북구">강북구</option>
+                            <option value="강서구">강서구</option>
+                            <option value="관악구">관악구</option>
+                            <option value="광진구">광진구</option>
+                            <option value="구로구">구로구</option>
+                            <option value="금천구">금천구</option>
+                            <option value="노원구">노원구</option>
+                            <option value="도봉구">도봉구</option>
+                            <option value="동대문구">동대문구</option>
+                            <option value="동작구">동작구</option>
+                            <option value="마포구">마포구</option>
+                            <option value="서대문구">서대문구</option>
+                            <option value="서초구">서초구</option>
+                            <option value="성동구">성동구</option>
+                            <option value="성북구">성북구</option>
+                            <option value="송파구">송파구</option>
+                            <option value="양천구">양천구</option>
+                            <option value="영등포구">영등포구</option>
+                            <option value="용산구">용산구</option>
+                            <option value="은평구">은평구</option>
+                            <option value="종로구">종로구</option>
+                            <option value="중구">중구</option>
+                            <option value="중랑구">중랑구</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-- 시장 요약 리스트(표) (시장명/한줄소개/위치) -->
+            <div class="marketTable">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>시장명</th>
+                            <th>한 줄 소개</th>
+                            <th>위치</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>강남터미널지하도상점가</td>
+                            <td>서초구에 위치한 지하상가로 의류 잡화를 취급합니다.</td>
+                            <td>서초구 반포동 163-1</td>
+                        </tr>
+                        <tr>
+                            <td>강북종합골목시장</td>
+                            <td>강북구에 위치한 재래시장 입니다. 어서어서 오셔요~~</td>
+                            <td>수유3동 177번지 일대</td>
+                        </tr>
+                        <tr>
+                            <td>개봉프라자</td>
+                            <td>개봉 프라자는 시장과 상가가 만난 융합형 공간입니다. 방문해보세요</td>
+                            <td>고척동 269-1</td>
+                        </tr>
+                        <tr>
+                            <td>경동시장</td>
+                            <td>오늘 어디가? 정겨운 경통시장 가!</td>
+                            <td>제기동 1018</td>
+                        </tr>
+                        <tr>
+                            <td>고덕전통시장</td>
+                            <td>고덕 전통시장에서 뜨끈한 국밥 한 그릇 드시고 가세요~</td>
+                            <td>고덕동 210-3</td>
+                        </tr>
+                        <tr>
+                            <td>고척프라자</td>
+                            <td>경관이 아름다운 고척프라자 가요!</td>
+                            <td>고척동 50-48</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+        <!-- 오른쪽 사이드바 -->
+        <aside class="mainAside">
+            <!-- 로그인 폼 -->
+            <div class="login">
+                <form name="loginForm" method="post">
+                    <div class="inputContainer">
+                        <label for="user">ID</label>
+                        <input type="text" name="id" id="id" size="15">
+                        <br>
+                        <label for="user">PW</label>
+                        <input type="password" name="password" id="password" size="15">
+                    </div>
+                    <input type="submit" value="로그인">
+                </form>
+                <a href="#" id="membership">회원가입</a>
+                <a href="#" id="idPassFinder">아이디/비밀번호 찾기</a>
+            </div>
+            <!-- 상품 광고 -->
+            <div class="advertisement">
+                <a href="https://search.shopping.naver.com/search/all?query=%EC%A0%9C%EC%B2%A0%EC%83%81%ED%92%88&bt=0&frm=NVSCPRO" target="_blank">
+                    <img src="./image/jecheolItem.png" alt="Item"></a>
+            </div>
+            <!-- 통합 검색 -->
+            <div class="search">
+                <input type="search" name="integratedSearchQ" id="integratedSearchQ" placeholder="통합검색">
+                <button type="submit" class="searchButton">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+            </div>
+            <!-- 이번주 매출 상품 -->
+            <div class="itemRank">
+                <p>이번주 최다 매출 상품</p>
+                <ol>
+                    <li>배추</li>
+                    <li>샤인머스켓</li>
+                    <li>방어회</li>
+                    <li>수육용 돼지고기</li>
+                    <li>귤</li>
+                </ol>
+            </div>
+        </aside>
+    </main>
+    <footer></footer>
+</body>
+
+</html>

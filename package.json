@@ -1,0 +1,22 @@
+{
+  "name": "205_web_sijangtong",
+  "version": "1.0.0",
+  "description": "board DB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jykim701/205_Web_Sijangtong.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jykim701/205_Web_Sijangtong/issues"
+  },
+  "homepage": "https://github.com/jykim701/205_Web_Sijangtong#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

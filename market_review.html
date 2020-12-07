@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시장 후기</title>
+    <!-- css 파일 링크 -->
+    <link rel="stylesheet" href="./market_review.css">
+    <!-- 폰트형 아이콘 링크 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- 구글 웹폰트 링크 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=East+Sea+Dokdo&family=Nanum+Gothic:wght@400;700&family=Yeon+Sung&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- main menu -->
+    <div class="header clearfix">
+        <nav id="topMenu">
+            <a href="#"><img src="./image/logo.png" alt="logo" class="homeIcon"></a>
+            <ul>
+                <li><a class="menuLink" href="#">점포 찾기</a></li>
+                <li><a class="menuLink" href="#">상품 찾기</a></li>
+                <li><a class="menuLink selected_menu" href="#">시장 후기</a></li>
+                <li><a class="menuLink" href="./market_promotion.html">시장 홍보</a></li>
+                <li><a class="menuLink" href="./mypage.html">My Page</a></li>
+            </ul>
+        </nav>
+    </div>
+    <hr id="menuUnderBar">
+
+    <!-- 점포 검색 -->
+    <div class="storeSearch">
+        <div class="horizon-container">
+            <div class="search">
+                <input type="search" name="StoreSearchQ" id="StoreSearchQ" placeholder="점포를 검색해보세요">
+                <button type="submit" class="searchButton">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+            <!-- 시장 후기 글쓰기 페이지로 연결 -->
+            <button id="write_new_button" onclick="location.href='./reviewedit.html'">새 글쓰기</button>
+        </div>
+        <p>점포별 후기를 클릭하여 확인해보세요.</p>
+    </div>
+
+    <!-- 자치구 드롭다운 선택 -->
+    <select name="region_comboBox" id="region_comboBox">
+        <option value="">자치구</option>
+        <option value="강남구">강남구</option>
+        <option value="강동구">강동구</option>
+        <option value="강북구">강북구</option>
+        <option value="강서구">강서구</option>
+        <option value="관악구">관악구</option>
+        <option value="광진구">광진구</option>
+        <option value="구로구">구로구</option>
+        <option value="금천구">금천구</option>
+        <option value="노원구">노원구</option>
+        <option value="도봉구">도봉구</option>
+        <option value="동대문구">동대문구</option>
+        <option value="동작구">동작구</option>
+        <option value="마포구">마포구</option>
+        <option value="서대문구">서대문구</option>
+        <option value="서초구">서초구</option>
+        <option value="성동구">성동구</option>
+        <option value="성북구">성북구</option>
+        <option value="송파구">송파구</option>
+        <option value="양천구">양천구</option>
+        <option value="영등포구">영등포구</option>
+        <option value="용산구">용산구</option>
+        <option value="은평구">은평구</option>
+        <option value="종로구">종로구</option>
+        <option value="중구">중구</option>
+        <option value="중랑구">중랑구</option>
+    </select>
+
+    <!-- 시장별 드롭다운 선택 -->
+    <select name="market_comboBox" id="market_comboBox">
+        <option value="">시장별</option>
+        <option value="경동시장">경동시장</option>
+        <option value="고척근린시장">고척근린시장</option>
+        <option value="금남시장">금남시장</option>
+        <option value="남성사계시장">남성사계시장</option>
+        <option value="대림중앙시장">대림중앙시장</option>
+        <option value="도곡시장">도곡시장</option>
+        <option value="돈암제일시장">돈암제일시장</option>
+        <option value="동원전통시장">동원전통시장</option>
+        <option value="망원시장">망원시장</option>
+        <option value="방학동도깨비시장">방학동도깨비시장</option>
+        <option value="별빛남문시장">별빛남문시장</option>
+        <option value="봉천제일시장">봉천제일시장</option>
+        <option value="비단길현대시장">비단길현대시장</option>
+        <option value="새마을시장">새마을시장</option>
+        <option value="석촌시장">석촌시장</option>
+        <option value="성대전통시장">성대전통시장</option>
+        <option value="송화벽화시장">송화벽화시장</option>
+        <option value="수유재래시장">수유재래시장</option>
+        <option value="신영시장">신영시장</option>
+        <option value="신원시장">신원시장</option>
+        <option value="신창시장">신창시장</option>
+        <option value="암사종합시장">암사종합시장</option>
+        <option value="연서시장">연서시장</option>
+        <option value="용문전통시장">용문전통시장</option>
+        <option value="우림시장">우림시장</option>
+        <option value="장미원골목시장">장미원골목시장</option>
+        <option value="중곡제일시장">중곡제일시장</option>
+        <option value="통인시장">통인시장</option>
+        <option value="포방터시장">포방터시장</option>
+        <option value="화곡본동시장">화곡본동시장</option>
+        <option value="화양제일시장">화양제일시장</option>
+    </select>
+    <!-- 품목별 드롭다운 선택 -->
+    <select name="item_comboBox" id="item_comboBox">
+        <option value="">품목별</option>
+        <option value="반찬">반찬</option>
+        <option value="채소">채소</option>
+        <option value="과일">과일</option>
+        <option value="육류">육류</option>
+        <option value="생선">생선</option>
+        <option value="건강식품">건강식품</option>
+        <option value="음료">음료</option>
+        <option value="건어물">건어물</option>
+        <option value="견과류">견과류</option>
+        <option value="양념">양념</option>
+        <option value="먹거리">먹거리</option>
+    </select>
+
+    <!-- 조회순, 최신순, 별점순 필터 선택 -->
+    <label class="filter"><input type="radio" name="order" value="order_inquiry">조회순</label>
+    <label class="filter"><input type="radio" name="order" value="order_newest">최신순</label>
+    <label class="filter"><input type="radio" name="order" value="order_grade">별점순</label>
+
+
+    <!-- 글 목록 -->
+    <ol class="review_list">
+        <li id="1">
+            <div class="horizon-container">
+                <div class="horizon-container">
+                    <img src="/image/review_img1.jpg" alt="현대한우직판장"><img src="/image/review_img1_2.jpg" alt="현대한우직판장2">
+                </div>
+                <div class="store_info">
+                    <p>동작구 | 상도전통시장 | 고기</p>
+                    <a href="#" class="store_name">현대한우직판장</a>
+                </div>
+                <div class="star_container horizon-container">
+                    <p>총점</p>
+                    <div class="star_rating">
+                        <span style="width:80%"></span>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <hr>
+        <li id="2">
+            <div class="horizon-container">
+                <div class="horizon-container">
+                    <img src="/image/review_img2.jpg" alt="현대한우직판장"><img src="/image/review_img2_2.jpg" alt="현대한우직판장2">
+                </div>
+                <div class="store_info">
+                    <p>마포구 | 망원시장 | 야채</p>
+                    <a href="#" class="store_name">수경야채</a>
+                </div>
+                <div class="star_container horizon-container">
+                    <p>총점</p>
+                    <!-- <i class="fa fa-star"></i> -->
+                    <div class="star_rating">
+                        <span style="width:60%"></span>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <hr>
+     
+    </ol>
+</body>
+
+</html>

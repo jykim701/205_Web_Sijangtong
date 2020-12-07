@@ -4,7 +4,7 @@
     display: block;
 }
 
-.horizon-conatiner {
+.horizon-container {
     /*수평으로 나열할 요소들 컨테이너*/
     display: flex;
 }
@@ -195,7 +195,7 @@ input[type="submit"] {
     margin-left: -2px;
 }
 
-#region {
+#region_comboBox {
     /*자치구 선택 드롭다운*/
     margin-top: 8px;
     width: 130px;
@@ -265,4 +265,10 @@ input[type="submit"] {
     font-family: 'Yeon Sung', cursive;
     font-size: 23px;
     /* text-decoration: underline rgb(183, 237, 250); */
+}
+
+.itemRank ol li a {   
+    /*이번주 최다 매출 상품 하이퍼링크*/
+    text-decoration: none;
+    color : black;
 }

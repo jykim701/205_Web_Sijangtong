@@ -1,9 +1,11 @@
 {
   "name": "205_web_sijangtong",
   "version": "1.0.0",
-  "description": "board DB",
+  "description": "Web programming for 200 Fall Semester_Introducing traditional markets in Seoul",
   "main": "index.js",
+  "private": true,
   "scripts": {
+    "start": "node ./bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +19,15 @@
   },
   "homepage": "https://github.com/jykim701/205_Web_Sijangtong#readme",
   "dependencies": {
-    "express": "^4.17.1"
-  }
+    "expres": "0.0.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.5",
+    "body-parser": "~1.17.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "ejs": "~2.5.6",
+    "morgan": "~1.8.1",
+    "serve-favicon": "~2.4.2"
+  },
+  "devDependencies": {}
 }

@@ -8,36 +8,76 @@
 
 
 <body>
+    <!-- main menu -->
+    <div class="header clearfix">
+        <nav id="topMenu">
+            <a href="#"><img src="./image/logo.png" alt="logo" class="homeIcon"></a>
+            <ul>
+                <li><a class="menuLink" href="#">점포 찾기</a></li>
+                <li><a class="menuLink" href="#">상품 찾기</a></li>
+                <li><a class="menuLink" href="#">시장 후기</a></li>
+                <li><a class="menuLink" href="#">시장 홍보</a></li>
+                <li><a class="menuLink" href="#">My Page</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
     <section>
         <form>
+            <label id="reviewsubmit">
+                <!-- 이후 리스너 달아서 리턴해줄 버튼 -->
+            <input type="submit" value="작성">
+            </label>
+
             <div id="riview">
                 <!-- 자치구 입력 콤보박스 -->
-                <select name="Gu">
+                <select name="gu" id="gucombo">
                     <option value="1">자치구별</option>
                 </select>
+
+                <!-- script로 Gu 값에 따른 콤보박스 작성 -->
+                <script>
+
+                </script>
+
                 <!-- 시장 입력 콤보박스 -->
-                <select name="market">
+                <select name="market" id="marketcombo">
                     <option value="1">시장별</option>
                 </select>
                 <!-- 품목 입력 콤보박스 -->
-                <select name="item">
+                <select name="item" id="itemcombo">
                     <option value="1">품목별</option>
                 </select>
+
                 <br>
 
                 <label id="reviewshopname">
-                    점포명 :
-                    <input type="text" size="15" value="" placeholder="점포명을 입력해주세요.">
-                    <!-- 이후 리스너 달아서 리턴해줄 버튼 -->
-                    <input type="submit" value="제출">
+                    점포명 :  
+                    <input type="text" id="shopname" size="15" value="" placeholder="점포명을 입력해주세요.">
                 </label>
 
                 <br>
 
+                
+
+                <hr>
+
+                <label id="reviewphoto">
+                    사진을 첨부해주세요.  
+                    <input type="file" id="photofile">
+                    <input type="file" id="photofile">
+                </label>
+                <br>
+                <label id="reviewdate">
+                    방문일을 입력해주세요.
+                    <input type="date" id="calendar">
+                </label>
+
                 <label id="reviewpoint">
-                    평점(1-5) :
+                평점(1-5) :
                     <!-- 편리한 숫자입력(슬라이드 바)을 위한 인풋 -->
-                    <input type="range" min="1" max="5" list="transparent" step="num">
+                    <input type="range" id="point" min="1" max="5" list="transparent" step="num">
                     <!-- 슬라이드 바의 데이터 입력을 대략적으로 도와주는 데이터리스트 설정  -->
                     <datalist id="transparent">
                         <option value="1" label="Low">
@@ -45,25 +85,10 @@
                         <option value="5" label="High">
                 </label>
 
-                <hr>
-
-                <label id="reviewphoto">
-                    사진을 첨부해주세요.
-                    <br>
-                    <input type="file">
-                    <input type="file">
-                </label>
                 <br>
-                <label id="reviewdate">
-                    방문일을 입력해주세요.
-                    <br>
-                    <input type="date">
-                </label>
 
-                <br>
                 <hr>
-                <textarea id="reviewtext" placeholder="리뷰내용을 입력해주세요.">
-
+                <textarea id="reviewtext" placeholder="리뷰내용을 입력해주세요." >
             </div>
         </form>
     </section>

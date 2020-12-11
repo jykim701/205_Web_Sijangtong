@@ -5,37 +5,53 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var expressSession = require('express-session');
 var expressErrorHandler = require('express-error-handler');
- 
-var mongoClient = require('mongodb').MongoClient;
- 
- 
- 
+var mongoose = require('mongoose');
+
 var database;
- 
+var userSchema;
+var userModel;
+
 //몽고디비에 연결 ,  보통 웹서버 만든 직후 연결 , DB 먼저 연결 되도 상관 없음
 //먼저 db를 가져온다 
 function connectDB() {
     //localhost 로컬 호스트
     //:27017  몽고디비 포트
-    //local db 생성시 만든 폴더 명
-    var databaseURL = 'mongodb+srv://sijangtong:205webprogramming@205.v8ndu.mongodb.net/SiJangTong.users?retryWrites=true&w=majority7';
-    mongoClient.connect(databaseURL,
-        function (err, cluster)
+    var databaseURL = 'mongodb+srv://sijangtong:205webprogramming@205.v8ndu.mongodb.net/SiJangTong?retryWrites=true&w=majority';
+ 
+    mongoose.Promise = global.Promise;
+    mongoose.connect(databaseURL);
+ 
+    database = mongoose.connection;     //db와 연결 시도
+ 
+    database.on('open',         //db 연결 될때의 이벤트
+        function ()
         {
-            //이 구문까지 실행되었다면 ongoDB 에 연결된 것
-            if (err) {
-                console.log('db connect error');
-                return;
-            }
+            console.log('data base 연결됨 ' + databaseURL);
+            
  
-            console.log('db was connected : ' + databaseURL);
+            //몽구스는 스키마를 정의하고 해당 스키마에 해당 하는 데이터를 집어넣는 방식으로 테이블과 유사
+            userSchema = mongoose.Schema({
+                id: String,
+                passwords: String,
+                name: String,
+                
+            });
+            console.log('userSchema 정의함');
  
-            database = cluster.db('test');
- 
-            //var users = database.collection('users');
- 
- 
+            //컬렏션과 스키마를 연결시킴
+            userModel = mongoose.model('users', userSchema);
+            console.log('userModel 정의함');
         }
+    );
+ 
+    database.on('disconnected',         //db 연결 끊길떄
+        function () {
+            console.log('data base 연결 끊어짐');
+        }
+    );
+ 
+    database.on('error',         //에러 발생하는 경우
+        console.error.bind(console, 'mongoose 연결 에러')
     );
  
 }
@@ -94,8 +110,7 @@ router.route('/process/login').post(
         if (database) {
             authUser(database, paramID, paramPW,
                 function (err, docs) {
-                    if (database)
-                    {
+                    if (database) {
                         if (err) {
                             console.log('Error!!!');
                             res.writeHead(200, { "Content-Type": "text/html;characterset=utf8" });
@@ -122,8 +137,7 @@ router.route('/process/login').post(
                         }
  
                     }
-                    else
-                    {
+                    else {
                         console.log('DB 연결 안됨');
                         res.writeHead(200, { "Content-Type": "text/html;characterset=utf8" });
                         res.write('<h1>databasae 연결 안됨</h1>');
@@ -141,21 +155,17 @@ router.route('/process/login').post(
  
 router.route('/process/addUser').post(
  
-    function (req, res)
-    {
+    function (req, res) {
         console.log('process/addUser 호출됨');
         var paramID = req.body.id || req.query.id;
         var paramPW = req.body.passwords || req.query.passwords;
         var paramName = req.body.name || req.query.name;
         console.log('paramID : ' + paramID + ', paramPW : ' + paramPW);
  
-        if (database)
-        {
+        if (database) {
             addUser(database, paramID, paramPW, paramName,
-                function (err, result)
-                {
-                    if (err)
-                    {
+                function (err, result) {
+                    if (err) {
                         console.log('Error!!!');
                         res.writeHead(200, { "Content-Type": "text/html;characterset=utf8" });
                         res.write('<h1>에러발생</h1>');
@@ -182,14 +192,13 @@ router.route('/process/addUser').post(
                 }
             );
         }
-        else
-        {
+        else {
             console.log('DB 연결 안됨');
             res.writeHead(200, { "Content-Type": "text/html;characterset=utf8" });
             res.write('<h1>databasae 연결 안됨</h1>');
             res.end();
         }
-       
+ 
     }
 );
  
@@ -203,18 +212,14 @@ var authUser = function (db, id, password, callback) {
     console.log('input id :' + id.toString() + '  :  pw : ' + password);
  
     //cmd 에서 db.users  로 썻던 부분이 있는데 이때 이 컬럼(테이블)에 접근은 다음처럼 한다
+    /*
     var users = database.collection("users");
- 
-    //찾고자 하는 정보를 입력해준다
-    //var result = users.find({ name: id, passwords: password });
-    //var result = users.find({ "name": id, "passwords":password });
-    //var result = users.find({ "name": id , "passwords": password });
-    //var result = users.find({});
- 
     var result = users.find({ "id": id, "passwords": password });
+    */
  
-    result.toArray(
-        function (err, docs) {
+    userModel.find({ "id": id, "passwords": password },
+        function (err, docs)
+        {
             if (err) {
                 callback(err, null);
                 return;
@@ -229,7 +234,6 @@ var authUser = function (db, id, password, callback) {
                 callback(null, null);
             }
         }
- 
     );
  
 };
@@ -238,27 +242,24 @@ var authUser = function (db, id, password, callback) {
  
 var addUser = function (db, id, passwords, name, callback) {
     console.log('add User 호출됨' + id + '  , ' + passwords);
-    var users = db.collection('users');
  
-    //컬렉션에 데이터 추가할때는 배열 형태로 집어 넣는다
-    users.insertMany([{ "id": id, "passwords": passwords, "name": name }],
-        function (err, result) {
-            if (err) {
+ 
+    var user = new userModel({ "id": id, "passwords": passwords, "name": name });
+ 
+    //user 정보를 저장하겠다는 함수
+    user.save
+    (
+        function (err)
+        {
+            if (err)
+            {
                 callback(err, null);
                 return;
             }
  
             //데이터가 추가됐다면 insertedCount 카운트가 0 보다 큰값이 된다
-            if (result.insertedCount > 0) {
-                console.log('사용자 추가 됨' + result.insertedCount);
-                callback(null, result);
-            }
-            else {
-                console.log('사용자 추가 안됨' + result.insertedCount);
-                callback(null, null);
- 
-            }
- 
+            console.log('사용자 추가 됨');
+            callback(null, user);
         }
     );
  
@@ -282,4 +283,3 @@ appServer.listen(app.get('port'),
         connectDB();        //DB 연결 , DB 연결 먼저해도 상관 없음
     }
 );
- 

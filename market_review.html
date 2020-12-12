@@ -14,17 +14,34 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=East+Sea+Dokdo&family=Nanum+Gothic:wght@400;700&family=Yeon+Sung&display=swap"
         rel="stylesheet">
+
+    <script>
+        function rating (score) {
+            var Text = "";
+            for(var i=0; i<=4; i++) {
+                if(i<score)
+                    Text +="★";
+                else
+                    Text +="☆";
+            }
+            document.write(Text);          
+
+        }
+
+    </script>
+
+
 </head>
 
 <body>
     <!-- main menu -->
     <div class="header clearfix">
         <nav id="topMenu">
-            <a href="#"><img src="./image/logo.png" alt="logo" class="homeIcon"></a>
+            <a href="./main.html"><img src="./image/logo.png" alt="logo" class="homeIcon"></a>
             <ul>
                 <li><a class="menuLink" href="#">점포 찾기</a></li>
                 <li><a class="menuLink" href="#">상품 찾기</a></li>
-                <li><a class="menuLink selected_menu" href="#">시장 후기</a></li>
+                <li><a class="menuLink selected_menu" href="./market_review.html">시장 후기</a></li>
                 <li><a class="menuLink" href="./market_promotion.html">시장 홍보</a></li>
                 <li><a class="menuLink" href="./mypage.html">My Page</a></li>
             </ul>
@@ -147,7 +164,8 @@
                 </div>
                 <div class="star_container horizon-container">
                     <p>총점</p>
-                    <div class="star_rating">
+                    <div class="star_rating" >
+                        <!-- <script>rating(4);</script> -->
                         <span style="width:80%"></span>
                     </div>
                 </div>
@@ -166,14 +184,15 @@
                 <div class="star_container horizon-container">
                     <p>총점</p>
                     <!-- <i class="fa fa-star"></i> -->
-                    <div class="star_rating">
-                        <span style="width:60%"></span>
+                    <div class="star_rating" >
+                        <!-- <script>rating(3);</script> -->
+                        <span style="width:40%"></span>
                     </div>
                 </div>
             </div>
         </li>
         <hr>
-     
+
     </ol>
 </body>
 

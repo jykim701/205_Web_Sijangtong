@@ -44,6 +44,22 @@
     font-size: 21px;
 }
 
+#topMenu .selected_menu {
+    /* 현재 선택 되어 있는 탑메뉴 */
+    text-decoration: none;
+    color: white;
+    padding-top: 13px;
+    background-color:  #8c939b;
+    display: block;
+    font: 17px bold;
+    border-radius: 20px 20px 0px 0px;
+    height: 37px;
+    width: 190px;
+    /* font-family: 'Yeon Sung', cursive; */
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 21px;
+}
+
 
 .homeIcon {
     /*메인 홈 좌측 상단 로고*/
@@ -163,21 +179,33 @@
     color : black;
     font-weight: 1000;
     font-size: 25px;
+    display: inline-block;
+    width : 300px;
 }
 .store_info p {
     margin-bottom: 30px;
 }
+/*
+.star_container {
+    margin:35px 0px 0px 300px;
+}
+
+.star_rating {
+    margin:2px 0px 0px 8px;
+    font-size: 30px;
+}
+*/
 .star_container {
     /* 총점 컨테이너 */
-    margin-left:330px;
-    margin-top:40px;
+    margin:40px 0px 0px 230px;
 }
-.star_rating {
-    /* 별점 */
+ .star_rating {
+     /* 별점 */
     width : 200px;
     margin-left : 10px;
 }
 .star_rating, .star_rating span {
+    /* 별점 이미지 */
     display:inline-block;
     height: 40px;
     overflow: hidden;
@@ -187,4 +215,5 @@
     background-position: left bottom;
     line-height: 0;
     vertical-align: top;
-}
+} 
+

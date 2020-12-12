@@ -19,7 +19,7 @@
     <!-- main menu -->
     <div class="header clearfix">
         <nav id="topMenu">
-            <a href="#"><img src="./image/logo.png" alt="logo" class="homeIcon"></a>
+            <a href="./main.html"><img src="./image/logo.png" alt="logo" class="homeIcon"></a>
             <ul>
                 <li><a class="menuLink" href="#">점포 찾기</a></li>
                 <li><a class="menuLink" href="#">상품 찾기</a></li>
@@ -140,7 +140,7 @@
         <aside class="mainAside">
             <!-- 로그인 폼 -->
             <div class="login">
-                <form name="loginForm" method="post">
+                <form name="loginForm" method="post" action="/process/login">
                     <div class="inputContainer">
                         <label for="user">ID</label>
                         <input type="text" name="id" id="id" size="15">
@@ -150,7 +150,7 @@
                     </div>
                     <input type="submit" value="로그인">
                 </form>
-                <a href="#" id="membership">회원가입</a>
+                <a href="./user_add.html" id="membership">회원가입</a>
                 <a href="#" id="idPassFinder">아이디/비밀번호 찾기</a>
             </div>
             <!-- 상품 광고 -->

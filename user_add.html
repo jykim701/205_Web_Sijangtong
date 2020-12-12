@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <!-- css 파일 링크 -->
+    <link rel="stylesheet" href="./user_add.css">
+</head>
+
+<body>
+
+    <a href="./main.html"><img src="./image/logo.png" alt="logo" class="homeIcon"></a>
+    <h2>회원가입</h2>
+    <div class="form_container">
+        <form method="post" action="/process/addUser">
+            <table id="membership">
+                <tr>
+                    <th>아이디</th>
+                    <td><input type="text" name="id"></td>
+                    <td><input type="button" value="중복확인"></td>
+                </tr>
+                <tr>
+                    <th>비밀번호</th>
+                    <td><input type="text" name="passwords"></td>
+                </tr>
+                <tr>
+                    <th>이름</th>
+                    <td><input type="text" name="name"></td>
+                </tr>
+                <tr>
+                    <th>닉네임</th>
+                    <td><input type="text" name="nickName"></td>
+                </tr>
+                <tr>
+                    <th>E-Mail</th>
+                    <td>
+                        <input type="text" name="Email" />
+
+                    </td>
+                </tr>
+                <tr>
+                    <th>핸드폰번호</th>
+                    <td id="phone">
+                        <input type="text" size="3" name="phone_start" />-
+                        <input type="text" size="4" name="phone_middle" />-
+                        <input type="text" size="4" name="phone_end" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>회원구분</th>
+                    <td>
+                        <select name="user_type">
+                            <option value="0">== 회원구분 ==
+                            <option value="점포">점포
+                            <option value="이용고객">이용고객
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <div>
+                <input type="submit" value="회원가입" name="">
+                <input type="reset" value="취소" name="">
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

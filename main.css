@@ -49,6 +49,22 @@
     background-color: #8c939b;
 }
 
+#topMenu .selected_menu {
+    /* 현재 선택 되어 있는 탑메뉴 */
+    text-decoration: none;
+    color: white;
+    padding-top: 13px;
+    background-color:  #8c939b;
+    display: block;
+    font: 17px bold;
+    border-radius: 20px 20px 0px 0px;
+    height: 37px;
+    width: 190px;
+    /* font-family: 'Yeon Sung', cursive; */
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 21px;
+}
+
 .homeIcon {
     /*메인 홈 좌측 상단 로고*/
     float: left;
@@ -243,12 +259,25 @@ input[type="submit"] {
     outline: none;
     font-size: 15px;
 }
+@keyframes blink {
+    /* 테두리 색 변경하는 애니메이션 */
+    0% {border: 8px solid #52A2E4;}
+    20% {border: 8px solid #52cee4;}
+    30% {border: 8px solid #63e452;}
+    50% {border: 8px solid #e8f763;}
+    80% {border: 8px solid #63e452;}
+    90% {border: 8px solid #52cee4;}
+    100% {border: 8px solid #52A2E4;}
+}
 
 .itemRank {
     /*이번주 최다 매출 상품*/
     width: 225px;
     margin-top: 15px;
-    border: 8px solid #52A2E4;
+    /* border: 8px solid #52A2E4; */
+    animation-name : blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 
 .itemRank p {

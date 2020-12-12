@@ -1,0 +1,55 @@
+body {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.homeIcon {
+    width: 300px;
+}
+
+.form_container {
+    margin: 0 auto;
+    width: 450px;
+}
+
+#membership {
+    border: 3px solid #52A2E4;
+    padding: 10px;
+}
+
+
+tbody th {
+    background-color: #52A2E4;
+    color: #ffffff;
+}
+
+th {
+    padding: 8px;
+}
+
+#phone {
+    padding-left: 10px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    /*회원가입 제출 버튼*/
+    height: 40px;
+    width: 80px;
+
+    background-color: #52A2E4;
+    border: none;
+    font-size: 14px;
+    color: white;
+    margin-top: 10px;
+}
+
+input[type="reset"] {
+    background-color: #8a8c8f;
+}
+input[type="button"] {
+    background-color: #cdcecf;
+    border:none;
+    height:25px;
+    cursor: pointer;
+}

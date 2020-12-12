@@ -44,6 +44,22 @@
     font-size: 21px;
 }
 
+#topMenu .selected_menu {
+    /* 현재 선택 되어 있는 탑메뉴 */
+    text-decoration: none;
+    color: white;
+    padding-top: 13px;
+    background-color:  #8c939b;
+    display: block;
+    font: 17px bold;
+    border-radius: 20px 20px 0px 0px;
+    height: 37px;
+    width: 190px;
+    /* font-family: 'Yeon Sung', cursive; */
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 21px;
+}
+
 
 .homeIcon {
     /*메인 홈 좌측 상단 로고*/

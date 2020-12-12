@@ -1,8 +1,371 @@
 /* study.css */
 /* csss를 제대로 만지지는 않았습니다아... */
 html, body { margin: 0; padding: 10px; height: 100%; }
-.nav{width:20%; height: 100%; float: left;}
-.section{width:20%; height: 100%; float: left;}
+.nav{width:15%; height: 100%; float: left;}
+.section{width:25%; height: 100%; float: left;}
 .aside{width:60%; height: 100%; float: left;}
-#shopphoto{width:100px; height: 100px; margin-left: auto; margin-right: auto; display: block;}
-#shopdata{margin-left: auto; margin-right: auto;}
+.result{
+    font-size: 15px;
+    font-family: 'Do Hyeon', sans-serif;
+    border: 2px solid #52A2E4;
+    color: #5f5f5f;
+    border-radius: 3px 3px 3px 3px;
+    padding: 5px 5px 5px 5px;
+}
+#shop{
+    margin-top: 10px;
+}
+#map{
+    margin-top: 10px;
+}
+#shopphoto{
+    width:100px; 
+    height: 100px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    display: block;
+}
+#shopdata{
+    margin-left: auto; 
+    margin-right: auto;
+}
+#searchresult ul li{
+    list-style: none; 
+    vertical-align: middle; 
+    line-height: 40px; 
+    color: white; 
+}
+#searchresult{
+    width:200px;
+    height: 700px;
+}
+#search{
+    margin-top: 10px;
+    font-size: 15px;
+    font-family: 'Do Hyeon', sans-serif;
+}
+#searchtext{
+    font-size: 15px;
+    font-family: 'Do Hyeon', sans-serif;
+    border: 4px solid #52A2E4;
+    color: #5f5f5f;
+    width: 200px;
+    height: 35px;
+}
+#searchbutton{
+    position: relative;
+    top: 7px;
+    left: 15px;
+    font-size: 13px;
+    font-family: 'Do Hyeon', sans-serif;
+}
+#gucombo {
+    /*자치구 선택 드롭다운*/
+    margin-top: 8px;
+    margin-bottom: 8px;
+    width: 150px;
+    height: 35px;
+    border: 4px solid #52A2E4;
+    color: #5f5f5f;
+    font-size: 13px;
+}
+
+.shopmenulink {
+    text-decoration: none;
+    color: white;
+    background-color: #52A2E4;
+    display: block;
+    font: 17px bold;
+    border-radius: 5px 5px 0px 0px;
+    height: 40px;
+    width: 100px;
+    /* font-family: 'Yeon Sung', cursive; */
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 20px;
+    margin-left: 40px;
+}
+
+#shopmenu ul li {
+    list-style: none;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 40px;
+    float: left;
+}
+
+.section #shop #shopMenu .menuLink:hover {
+    /* background-color: #2c5b81; */
+    background-color: #8c939b;
+}
+
+
+
+/* 혜진스 작업분(main.css) */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.horizon-conatiner {
+    /*수평으로 나열할 요소들 컨테이너*/
+    display: flex;
+}
+
+.vertical-container {
+    /*수직으로 나열할 요소들 컨테이너*/
+    flex-direction: column;
+}
+
+#topMemu {
+    /*홈 상단의 메인 메뉴*/
+    height: 40px;
+    width: 850px;
+}
+
+#topMenu ul li {
+    list-style: none;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 40px;
+    float: left;
+}
+
+#topMenu .menuLink {
+    text-decoration: none;
+    color: white;
+    padding-top: 13px;
+    background-color: #52A2E4;
+    display: block;
+    font: 17px bold;
+    border-radius: 20px 20px 0px 0px;
+    height: 37px;
+    width: 190px;
+    /* font-family: 'Yeon Sung', cursive; */
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 21px;
+}
+
+#topMenu .menuLink:hover {
+    /*메뉴 클릭 시*/
+    /* background-color: #2c5b81; */
+    background-color: #8c939b;
+}
+
+.homeIcon {
+    /*메인 홈 좌측 상단 로고*/
+    float: left;
+    width: 160px;
+    height: 50px;
+    padding-right: 55px;
+}
+
+#menuUnderBar {
+    background-color: rgb(108, 137, 165);
+    width: 100%;
+    height: 3px;
+    margin-top: 0px;
+}
+
+.login {
+    /*로그인 폼*/
+    float: left;
+    background-color: rgb(189, 221, 247);
+    padding: 0px 4px 10px 0px;
+}
+
+.login label {
+    /*로그인 아이디/비밀번호 label*/
+    width: 40px;
+    float: left;
+}
+
+.inputContainer {
+    /*ID/PW 입력란과 제출 버튼 컨테이너*/
+    display: inline-block;
+    margin: 15px 0px 10px 10px;
+}
+
+input[type="submit"] {
+    /*로그인 제출 버튼*/
+    height: 30px;
+    background-color: #52A2E4;
+    border: none;
+    vertical-align: top;
+    display: inline-block;
+    margin-top: 0px;
+    font-family: 'Do Hyeon', sans-serif;
+    font-size:14px;
+}
+
+#idPassFinder,
+#membership {
+    /*회원가입, 아이디/비밀번호 찾기 글자버튼*/
+    font-size: 13px;
+    color: #393a3b;
+    margin-left: 30px;
+    font-family: 'Do Hyeon', sans-serif;
+}
+
+.mainHome {
+    /*메인 화면의 오른쪽 사이드바 제외한 모든 부분*/
+    background-color: rgb(189, 221, 247);
+    width: 1000px;
+}
+
+.mainAside {
+    /*메인 홈 오른쪽 사이드바 */
+    width: 29%;
+    margin-left: 1%;
+    float: right;
+}
+
+.marketRank #myeongye {
+    /*명예의 전당 그림*/
+    width: 280px;
+    height: 80px;
+    margin : 20px 0px 0px 88px;
+}
+
+/*명예의 전당 1,2,3위*/
+
+.marketRank>ol>li {
+    /*명예의 전당 순위*/
+    font-style: italic;
+    font-family: 'Do Hyeon', sans-serif;
+    margin : -4px 0px 10px 55px;
+}
+
+.marketRank #first {
+    font-size: 33px;
+    font-style: bold;
+    color: #224d70
+}
+
+.marketRank #second {
+    font-size: 28px;
+    margin-top: 5px;
+    font-style: bold;
+    color: #316794
+}
+
+.marketRank #third {
+    font-size: 24px;
+    margin-top: 6px;
+    font-style: bold;
+    color: #3d7db1
+}
+
+.marketSearch>p {
+    text-decoration: underline;
+    font-size: 20px;
+    font-family: 'Do Hyeon', sans-serif;
+    margin-bottom: 5px;
+    color: #0b1924
+}
+
+.marketSearch {
+    /*우리동네 시장 검색창+자치구 드롭다운 컨테이너*/
+    margin: 40px 0px 10px 45px;
+}
+
+.search {
+    /*검색입력창+제출버튼 컨테이너*/
+    width: 310px;
+    position: relative;
+    display: flex;
+}
+
+#marketSearchQ {
+    /*우리동네 시장 검색창 검색어 입력 받는 곳*/
+    width: 270px;
+    border: 5px solid #52A2E4;
+    border-right: none;
+    height: 50px;
+    outline: none;
+}
+
+.searchButton {
+    /*검색어 제출 버튼*/
+    width: 42px;
+    height: 50px;
+    border: 2px solid #52A2E4;
+    background-color: #52A2E4;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: -2px;
+}
+
+#region {
+    /*자치구 선택 드롭다운*/
+    margin-top: 8px;
+    width: 130px;
+    height: 35px;
+    border: 4px solid #52A2E4;
+    color: #949795;
+    font-size: 13px;
+}
+
+.marketTable {
+    /*시장 목록 표*/
+    text-align: center;
+    margin-left: 18px;
+    margin-top: 15px;
+    width:850px;
+}
+
+.marketTable th {
+    background-color: #52A2E4;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.marketTable td {
+    border-bottom: 1px solid #8c939b;
+    /* font-family: 'Do Hyeon', sans-serif;
+    font-size:21px; */
+    font-family: 'Nanum Gothic', sans-serif;
+    padding:6px;
+}
+
+.advertisement img {
+    width: 250px;
+    margin: 10px 0px 10px 0px;
+}
+
+#integratedSearchQ {
+    /*통합검색창*/
+    width: 200px;
+    border: 6px solid #52A2E4;
+    border-right: none;
+    height: 50px;
+    outline: none;
+    font-size: 15px;
+}
+
+.itemRank {
+    /*이번주 최다 매출 상품*/
+    width: 225px;
+    margin-top: 15px;
+    border: 8px solid #52A2E4;
+}
+
+.itemRank p {
+    margin-left: 10px;
+    text-decoration: underline;
+    font-size: 23px;
+    /* font-style: italic; */
+    font-family: 'Do Hyeon', sans-serif;
+}
+
+.itemRank ol li {
+    margin-top: 10px;
+    /* font-family: 'East Sea Dokdo', cursive; */
+    font-family: 'Yeon Sung', cursive;
+    font-size: 23px;
+    /* text-decoration: underline rgb(183, 237, 250); */
+}

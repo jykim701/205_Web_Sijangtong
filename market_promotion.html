@@ -1,63 +1,221 @@
 <!DOCTYPE html>
 <html>
-    <head><title>시장에 대한 다양한 정보를 확인하세요</title>
-        <style>
-            div{
-                display : inline-block;
-                margin : 10px;
-                background : #0B1907;
-                color : whitesmoke;
-                text-align : left;
-                font : bold;
-                height : 100px;
-                padding : 15px
-            }
-            .market{
-                text-align: center;
-                width: 1200px;
-                height : 300px;
-            }
-            .market_info{
-                background : #0B1907;
-                color : whitesmoke;
-                text-align : left;
-                margin : 20px;
-                width :400px;
-                height : 200px;
-                padding-left : 50px;
-            }
-            a{ text-decoration: none; color:whitesmoke; }
-            a:visited { text-decoration: none; }
-            a:hover { text-decoration: none; }
-            a:focus { text-decoration: none; }
-            a:hover, a:active { text-decoration: none; }
-        </style>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>시장에 대한 다양한 정보를 확인하세요</title>
+
+        <!-- css 파일 링크 -->
+        <link rel="stylesheet" href="./market_promotion.css">
+        <!-- 폰트형 아이콘 링크 -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- 구글 웹폰트 링크 -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=East+Sea+Dokdo&family=Nanum+Gothic:wght@400;700&family=Yeon+Sung&display=swap"
+            rel="stylesheet">
     </head>
     <body>
-        <section>
-            <form>
-                <select name="Gu">
-                    <option value="1">자치구별</option>
-                </select>
-                <select name="market">
-                    <option value="1">시장별</option>
-                </select>
-            </form>
-        </section>
-        
-        <div class = "market" style = "background-image : url(image_src/market_background_1.png)">
-            <div>
-                <a href = "https://shopping.naver.com/market/traditionalmarket?storeId=100840011">경동 시장</a>
-            </div>
-            <div class = "market_info">
-                <table>
-                    <tbody>
-                        <tr><td>주소</td><td>서울 동대문구 고산자로36길 3</td></tr>
-                        <tr><td>배달 지역</td><td>신설동, 용두동, 제기동, 전농동, 답십리동, 청량리동, 회기동, 휘경동</td></tr>
-                        <tr><td>배달 시간</td><td>매일 10:00-19:00(2시간 이내 배달)</td></tr>
-                        <tr><td>배달 비용</td><td>4,000원 (최소 주문 금액 15,000원)</td></tr>
-                    </tbody>
-                </table>
+        <!-- main menu -->
+        <div class="header clearfix">
+            <nav id="topMenu">
+                <a href="#"><img src="./image/logo.png" alt="logo" class="homeIcon"></a>
+                <ul>
+                    <li><a class="menuLink" href="#">점포 찾기</a></li>
+                    <li><a class="menuLink" href="#">상품 찾기</a></li>
+                    <li><a class="menuLink selected_menu" href="#">시장 후기</a></li>
+                    <li><a class="menuLink" href="./market_promotion.html">시장 홍보</a></li>
+                    <li><a class="menuLink" href="./mypage.html">My Page</a></li>
+                </ul>
+            </nav>
+        </div>
+        <hr id="menuUnderBar">
+
+        <!--market promotion introduction with district filter-->
+        <h2>시장별 홍보를 클릭하여 확인해보세요</h2>
+        <select name="region_comboBox" id="region_comboBox">
+            <option value="">자치구</option>
+            <option value="강남구">강남구</option>
+            <option value="강동구">강동구</option>
+            <option value="강북구">강북구</option>
+            <option value="강서구">강서구</option>
+            <option value="관악구">관악구</option>
+            <option value="광진구">광진구</option>
+            <option value="구로구">구로구</option>
+            <option value="금천구">금천구</option>
+            <option value="노원구">노원구</option>
+            <option value="도봉구">도봉구</option>
+            <option value="동대문구">동대문구</option>
+            <option value="동작구">동작구</option>
+            <option value="마포구">마포구</option>
+            <option value="서대문구">서대문구</option>
+            <option value="서초구">서초구</option>
+            <option value="성동구">성동구</option>
+            <option value="성북구">성북구</option>
+            <option value="송파구">송파구</option>
+            <option value="양천구">양천구</option>
+            <option value="영등포구">영등포구</option>
+            <option value="용산구">용산구</option>
+            <option value="은평구">은평구</option>
+            <option value="종로구">종로구</option>
+            <option value="중구">중구</option>
+            <option value="중랑구">중랑구</option>
+        </select>
+
+        <!--market list-->
+        <div class = "market_list" style="background-image: url(./image_src/market_background_12.png);">
+            <a href="https://shopping.naver.com/market/traditionalmarket?storeId=100840011" target="_blank"></a>
+            <div class = "market_inner">
+                <div class = "market_left">
+                    <h4>경동 시장</h4>
+                    <p>경동 시장에서 즐기던 맛집을 집에서 편하게 즐겨보세요</p>
+                </div>
+                <div class = "market_right">
+                    <dl>
+                        <dt>주소</dt>
+                        <dd>서울 동대문구 고산자로 36길 3</dd>
+                        <dt>배달지역</dt>
+                        <dd>신설동, 용두동, 제기동, 전농동, 답십리동, 청량리동, 회기동, 휘경동</dd>
+                        <dt>배달 시간</dt>
+                        <dd>매일 10:00-19:00(2시간 이내 배달)</dd>
+                        <dt>배달 비용</dt>
+                        <dd>4,000원 (최소 주문 금액 15,000원)</dd>
+                    </dl>
+                </div>
             </div>
         </div>
+
+        <div class = "market_list" style="background-image: url(./image_src/market_background_2.png);">
+            <a href="https://shopping.naver.com/market/traditionalmarket?storeId=100840017" target="_blank"></a>
+            <div class = "market_inner">
+                <div class = "market_left">
+                    <h4>고척 근린 시장 </h4>
+                    <p>고척 근린 시장으로 놀러오세요</p>
+                </div>
+                <div class = "market_right">
+                    <dl>
+                        <dt>주소</dt>
+                        <dd>서울 구로구 고척로32길 11-3</dd>
+                        <dt>배달지역</dt>
+                        <dd>고척동,개봉동,오류동,궁동,천왕동,항동,온수동</dd>
+                        <dt>배달 시간</dt>
+                        <dd>매일 10:00-19:00(2시간 이내 배달)</dd>
+                        <dt>배달 비용</dt>
+                        <dd>4,000원 (최소 주문 금액 15,000원)</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+
+        <div class = "market_list" style="background-image: url(./image_src/market_background_3.png);">
+            <a href="https://shopping.naver.com/market/traditionalmarket?storeId=100840031" target="_blank"></a>
+            <div class = "market_inner">
+                <div class = "market_left">
+                    <h4>대림 중앙 시장 </h4>
+                    <p>대림 중앙 시장에서 다양한 향신료를 만나보세요 </p>
+                </div>
+                <div class = "market_right">
+                    <dl>
+                        <dt>주소</dt>
+                        <dd>서울 영등포구 디지털로37나길 21</dd>
+                        <dt>배달지역</dt>
+                        <dd>서울시 영등포구 전 지역</dd>
+                        <dt>배달 시간</dt>
+                        <dd>매일 10:00-19:00(2시간 이내 배달)</dd>
+                        <dt>배달 비용</dt>
+                        <dd>4,000원 (최소 주문 금액 15,000원)</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+
+        <div class = "market_list" style="background-image: url(./image_src/market_background_4.png);">
+            <a href="https://shopping.naver.com/market/traditionalmarket?storeId=100840059" target="_blank"></a>
+            <div class = "market_inner">
+                <div class = "market_left">
+                    <h4>망원 시장</h4>
+                    <p>SNS 속 핫한 맛집을 집에서!</p>
+                </div>
+                <div class = "market_right">
+                    <dl>
+                        <dt>주소</dt>
+                        <dd>서울 마포구 포은로8길 14</dd>
+                        <dt>배달지역</dt>
+                        <dd>마포구 일부지역</dd>
+                        <dt>배달 시간</dt>
+                        <dd>매일 10:00-19:00(2시간 이내 배달)</dd>
+                        <dt>배달 비용</dt>
+                        <dd>4,000원 (최소 주문 금액 15,000원)</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+
+        <div class = "market_list" style="background-image: url(./image_src/market_background_5.png);">
+            <a href="https://shopping.naver.com/market/traditionalmarket?storeId=100859292" target="_blank"></a>
+            <div class = "market_inner">
+                <div class = "market_left">
+                    <h4>봉천 제일 시장</h4>
+                    <p>봉천 제일 시장으로 놀러오세요</p>
+                </div>
+                <div class = "market_right">
+                    <dl>
+                        <dt>주소</dt>
+                        <dd>관악구 청룡2길 29</dd>
+                        <dt>배달지역</dt>
+                        <dd>서울시 관악구 일부지역</dd>
+                        <dt>배달 시간</dt>
+                        <dd>매일 10:00-19:00(2시간 이내 배달)</dd>
+                        <dt>배달 비용</dt>
+                        <dd>4,000원 (최소 주문 금액 15,000원)</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+
+        <div class = "market_list" style="background-image: url(./image_src/market_background_6.png);">
+            <a href="https://shopping.naver.com/market/traditionalmarket?storeId=100840009" target="_blank"></a>
+            <div class = "market_inner">
+                <div class = "market_left">
+                    <h4>성대 전통 시장</h4>
+                    <p>장미마을 성대 전통 시장으로 놀러오세요</p>
+                </div>
+                <div class = "market_right">
+                    <dl>
+                        <dt>주소</dt>
+                        <dd>서울 동작구 성대로2길 7</dd>
+                        <dt>배달지역</dt>
+                        <dd>노량진동, 상도동, 본동, 흑석동, 대방동, 신대방동</dd>
+                        <dt>배달 시간</dt>
+                        <dd>매일 10:00-19:00(2시간 이내 배달)</dd>
+                        <dt>배달 비용</dt>
+                        <dd>4,000원 (최소 주문 금액 15,000원)</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+
+        <div class = "market_list" style="background-image: url(./image_src/market_background_7.png);">
+            <a href="https://shopping.naver.com/market/traditionalmarket?storeId=100840064" target="_blank"></a>
+            <div class = "market_inner">
+                <div class = "market_left">
+                    <h4>화양 제일 시장</h4>
+                    <p>광진구 최고시장 !</p>
+                </div>
+                <div class = "market_right">
+                    <dl>
+                        <dt>주소</dt>
+                        <dd>서울 광진구 아차산로29길 59</dd>
+                        <dt>배달지역</dt>
+                        <dd>자양동, 화양동, 군자동</dd>
+                        <dt>배달 시간</dt>
+                        <dd>매일 10:00-19:00(2시간 이내 배달)</dd>
+                        <dt>배달 비용</dt>
+                        <dd>4,000원 (최소 주문 금액 15,000원)</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+
     </body>
+</html>

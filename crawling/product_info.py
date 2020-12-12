@@ -1,10 +1,10 @@
-from flask import Flask, render_templte, jsonify, request
+from flask import Flask, render_template, jsonify, request
 import requests
 from bs4 import BeautifulSoup
 from pymongo import MongoClient
 
 client = MongoClient('localhost', 27017)
-crawlingDB = client.dbproject
+db = client.dbproject
 
 #성대전통시장 URL
 def get_product_info():
@@ -26,37 +26,35 @@ def get_product_info():
 
     #카테고리별 반복문 돌리기
     data = BeautifulSoup(result.text, 'html.parser')
-    products = data.find('div', {'class':'jas_contain'})
-    product = products.find_all('div', {'class':'product-grid-item'})
+    products = data.find('ul', {'class':'_1KcFRtaBgc'})
+    product = products.find_all('.li', {'class':'_1vjBlnNJgf'})
 
     for one in product:
-        title = one.select_one('.product-title').text
-        price = one.select_one('.price').text
-        img_h = one.select_one('.product-element-top > a').get('href')
+        title = one.select_one('._2aVk27Ie-Ye').text
+        price = one.select_one('._3ztiP6MwRJ').text
+        img_h = one.select_one('.X1DfuFYD6M > a').get('href')
         img_url = f""
-        img_s = one.select_one('.product-element-top > a > img').get('src')
+        img_s = one.select_one('.FhsSazoz8T').get('src')
         img_src = f"https:{img_s}"
     
-    doc = {'market': keys[i], 'title':title, 'price':price, 'img_url':img_url, 'img_src':img_src}
+    doc = {'market': marketID[i], 'title':title, 'price':price, 'img_url':img_url, 'img_src':img_src}
 
     def info():
-        url = "https://zerowastestore.com/"
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'}
-    result = requests.get(url, headers=headers)
+        url = "https://shopping.naver.com/market/traditionalmarket?storeId=100840009"
+    header = {'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36'}
+    result = requests.get(url)
     soup = BeautifulSoup(result.text, 'html.parser')
-    products = soup.find('div', {'class': 'jas_contain'})
-    product = products.find_all(
-        'div', {'class': 'product-grid-item'})
+    
+    products = data.find('ul', {'class':'_1KcFRtaBgc'})
+    product = products.find_all('.li', {'class':'_1vjBlnNJgf'})
+
     for one in product:
-        main_title = one.select_one('.product-title').text
-        main_price = one.select_one('.price').text
-        main_img_h = one.select_one(
-            '.product-element-top > a').get('href')
-        main_img_url = f"https://zerowastestore.com{main_img_h}"
-        main_img_s = one.select_one(
-            '.product-element-top > a > img').get('src')
-        main_img_src = f"https:{main_img_s}"
+        main_title = one.select_one('._2aVk27Ie-Ye').text
+        main_price = one.select_one('._3ztiP6MwRJ').text
+        main_img_h = one.select_one('.X1DfuFYD6M > a').get('href')
+        main_img_url = f""
+        main_img_s = one.select_one('.FhsSazoz8T').get('src')
+        main_img_src = f"https:{img_s}"
 
         main_doc = {
             'category': 'arrival',
@@ -65,15 +63,4 @@ def get_product_info():
             'main_img_url': main_img_url,
             'main_img_src': main_img_src
         }
-        db.zerowastestore.insert_one(main_doc)
-    
-
-def update_db():
-    update_soap = db.zerowastestore.update_many(
-        {'category': 'Soap Bars'}, {'$set': {'category': 'Others'}})
-    update_zwk = db.zerowastestore.update_many(
-        {'category': 'ZWS Kits'}, {'$set': {'category': 'Others'}})
-    update_zws = db.zerowastestore.update_many({'category': 'ZWS Sustainables'}, {'$set': {'category': 'Others'}})
-
-if __name__ == "__main__":
-    # get_info()
+        db.sijangtong.insert_one(main_doc)

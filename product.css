@@ -114,7 +114,7 @@ section, header{
 /* General Demo Style */
 body{
 	font-family: Cambria, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
-	background-color: whitesmoke;
+	background: #e0e3ec url(../images/bgnoise_lg.jpg) repeat top left;
 	font-weight: 400;
 	font-size: 15px;
 	color: #393b40;
@@ -125,7 +125,7 @@ a{
 	text-decoration: none;
 }
 .container{
-	
+	width: 100%;
 	position: relative;
 	text-align: center;
 }

@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>신선한 상품을 바로 구매하세요</title>
 
         <!-- css 파일 링크 -->
-        <link rel="stylesheet" href="product.css"/>
-        <link rel="stylesheet" href="productstyle.css"/>
+        <link rel="stylesheet" type="text/css" href="./product.css">
+        <link rel="stylesheet" type="text/css" href="./productstyle.css">
         <script type="text/javascript" src="js/modernizr.custom.29473.js"></script>
         <!-- 폰트형 아이콘 링크 -->
-        
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- 구글 웹폰트 링크 -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -18,7 +17,6 @@
             href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=East+Sea+Dokdo&family=Nanum+Gothic:wght@400;700&family=Yeon+Sung&display=swap"
             rel="stylesheet">
     </head>
-    
     <body>
         <!-- main menu -->
         <div class="header clearfix">
@@ -34,392 +32,382 @@
             </nav>
         </div>
         <hr id="menuUnderBar">
-        <h2>항목별 상품을 클릭하면 네이버페이로 바로 이동합니다</h2>
-        
+
+        <div class 
         <!--radio set for filtering products by its categories-->
-        <div class = "container">
-            <section class = "ff-container">
+        <section class = 'ff-container'>
+            <input id = "select-type-all" name = "radio-set-1" type="radio" class="ff-selector-type-all" checked="checked">
+            <label for = "select-type-all" class = "ff-label-type-all">전체보기</label>
+            <input for = "select-type-1" name = "radio-set-1" type="radio" class="ff-selector-type-1">
+            <label for = "select-type-1" class ="ff-label-type-1">먹거리</label>
+            <input for = "select-type-2" name = "radio-set-1" type="radio" class="ff-selector-type-2">
+            <label for = "select-type-2" class ="ff-label-type-2">반찬</label>
+            <input for = "select-type-3" name = "radio-set-1" type="radio" class="ff-selector-type-3">
+            <label for = "select-type-3" class ="ff-label-type-3" class ="ff-category1">과일</label>
+            <input for = "select-type-4" name = "radio-set-1" type="radio" class="ff-selector-type-4">
+            <label for = "select-type-4" class ="ff-label-type-4" class ="ff-category1">육류</label>
+            <input for = "select-type-5" name = "radio-set-1" type="radio" class="ff-selector-type-5">
+            <label for = "select-type-5" class ="ff-label-type-5" class ="ff-category1">생선</label>
+            <input for = "select-type-6" name = "radio-set-1" type="radio" class="ff-selector-type-6">
+            <label for = "select-type-6" class ="ff-label-type-6" class ="ff-category1">양념</label>
+            <div class = "clr"></div>
 
-                <input id = "select-type-all" name = "radio-set-1" type="radio" class="ff-selector-type-all" checked="checked"/>
-                <label for = "select-type-all" class = "ff-label-type-all">전체보기</label>
-
-                <input for = "select-type-1" name = "radio-set-1" type="radio" class="ff-selector-type-1"/>
-                <label for = "select-type-1" class ="ff-label-type-1">먹거리</label>
-
-                <input for = "select-type-2" name = "radio-set-1" type="radio" class="ff-selector-type-2"/>
-                <label for = "select-type-2" class ="ff-label-type-2">반찬</label>
-
-                <input for = "select-type-3" name = "radio-set-1" type="radio" class="ff-selector-type-3"/>
-                <label for = "select-type-3" class ="ff-label-type-3">과일</label>
-
-                <input for = "select-type-4" name = "radio-set-1" type="radio" class="ff-selector-type-4"/>
-                <label for = "select-type-4" class ="ff-label-type-4">육류</label>
-
-                <input for = "select-type-5" name = "radio-set-1" type="radio" class="ff-selector-type-5"/>
-                <label for = "select-type-5" class ="ff-label-type-5">생선</label>
-
-                <input for = "select-type-6" name = "radio-set-1" type="radio" class="ff-selector-type-6"/>
-                <label for = "select-type-6" class ="ff-label-type-6">양념</label>
-
-                <div class = "clr"></div>
-
-                <ul class = "ff-items">
-                    <li class = "ff-item-type-1">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5165784500" target="_blank">
-                            <span>[동작구 배달] 핫바 1개 [남성사계 오향한방족발개성]</span>
-                            <img src="./crawling/product categorized/남성_먹거리_17.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-2">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5204197332"target="_blank">
-                            <span>[동작구 배달] 맛깔나게 절인 겉절이 1kg [남성사계 김치백화점]</span>
-                            <img src="./crawling/product categorized/남성_반찬_11.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-2">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5204197332"target="_blank">
-                            <span>[동작구 배달] 맛깔나게 절인 겉절이 1kg [남성사계 김치백화점]</span>
-                            <img src = "./crawling/product categorized/	남성_반찬_11.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-1">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5165784500"target="_blank">
-                            <span>[동작구 배달] 핫바 1개 [남성사계 오향한방족발개성]</span>
-                            <img src = "./crawling/product categorized/	남성_먹거리_17.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-3">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5203836030"target="_blank">
-                            <span>[동작구 배달] 달콤하고 맛좋은 배 1.8kg [남성사계 해돋이청과]</span>
-                            <img src = "./crawling/product categorized/	남성_과일_23.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-6">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5165837527"target="_blank">
-                            <span>[동작구 배달] 국산 참기름 350ml [남성사계 남성고추방앗간]</span>
-                            <img src = "./crawling/product categorized/	남성_양념_29.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-1">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5165779072"target="_blank">
-                            <span>[동작구 배달] 닭발 1팩 [남성사계 오향한방족발개성]</span>
-                            <img src = "./crawling/product categorized/	남성_먹거리_35.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-4">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5247695356"target="_blank">
-                            <span>[은평구 배달] 1+등급 한돈 생갈비 600g [대림 한우마을]</span>
-                            <img src = "./crawling/product categorized/	대림_육류_3.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-1">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5247681633"target="_blank">
-                            <span>[은평구 배달] 우리간식 한과 370g [대림 대림농산물직판장]</span>
-                            <img src = "./crawling/product categorized/	대림_먹거리_1.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-1">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5247755506"target="_blank">
-                            <span>[은평구 배달] 쫄깃한 왕족발 특대 [대림 궁중한방족발]	</span>
-                            <img src = "./crawling/product categorized/	대림_먹거리_2.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-6">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5247789474"target="_blank">
-                            <span>[은평구 배달] 정성이 꽉찬 집된장 1kg [대림 궁중한방족발]</span>
-                            <img src = "./crawling/product categorized/	대림_양념_9.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-4">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5247681633"target="_blank">
-                            <span>[은평구 배달] 1등급 한우 육회 600g [대림 한우마을]	</span>
-                            <img src = "./crawling/product categorized/	대림_육류_4.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-5">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5247653948"target="_blank">
-                            <span>[은평구 배달] 제수용 조기 3마리 [대림 대림농산물직판장]	</span>
-                            <img src = "./crawling/product categorized/	대림_생선_1.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-5">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5242912265"target="_blank">
-                            <span>[은평구 배달] 찰랑찰랑 물미역 200g [대림 대박나물]	</span>
-                            <img src = "./crawling/product categorized/	대림_생선_2.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-5">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5243247408"target="_blank">
-                            <span>"	[은평구 배달] 완도산 다시마 대 [대림 궁중한방족발]	</span>
-                            <img src = "./crawling/product categorized/	대림_생선_3.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-5">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5243245568"target="_blank">
-                            <span>[은평구 배달] 부드럽고 쫄깃한 진도미역 2개 [대림 궁중한방족발]	</span>
-                            <img src = "./crawling/product categorized/	대림_생선_4.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-4">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5234417131"target="_blank">
-                            <span>[동작구 배달] 소등심 불고기용 500g [고기사랑]	</span>
-                            <img src = "./crawling/product categorized/	성대_육류_1.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-4">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5069818567"target="_blank">
-                            <span>[동작구 배달] 부채살 500g [고기사랑]	</span>
-                            <img src = "./crawling/product categorized/	성대_육류_2.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-2">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5063818462"target="_blank">
-                            <span>[송파구배달] 멸치볶음 3종 세트 (잔멸치,고추장멸치,견과류멸치) [석촌 건강한반찬]	</span>
-                            <img src = "./crawling/product categorized/	석촌_반찬_1.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-2">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5063780774"target="_blank">
-                            <span>"	[송파구배달] 오이소박이 1팩 [석촌 건강한반찬]	</span>
-                            <img src = "./crawling/product categorized/	석촌_반찬_2.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-2">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5069809938"target="_blank">
-                            <span>[송파구배달] 차돌된장찌개 2인분 [석촌 건강한반찬]	</span>
-                            <img src = "./crawling/product categorized/	석촌_반찬_3.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-2">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5063775642"target="_blank">
-                            <span>[송파구배달] 제육볶음 1팩 [석촌 건강한반찬]	</span>
-                            <img src = "./crawling/product categorized/	석촌_반찬_4.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-6">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5069675391"target="_blank">
-                            <span>[용산구배달] 된장 700g [명신상회]	</span>
-                            <img src = "./crawling/product categorized/	용문_양념_1.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-6">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5069686384"target="_blank">
-                            <span>[용산구배달] 된장 1.2kg [명신상회]	</span>
-                            <img src = "./crawling/product categorized/	용문_양념_2.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-6">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5060897873"target="_blank">
-                            <span>[용산구배달] 마늘담금고추장 1통 [명신상회]	</span>
-                            <img src = "./crawling/product categorized/	용문_양념_3.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-4">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5069910846"target="_blank">
-                            <span>[광진구 배달] 양념돈가스 1근 [고기사랑]	</span>
-                            <img src = "./crawling/product categorized/	중곡_육류_1.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-4">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5069913003"target="_blank">
-                            <span>[광진구 배달] 양념돈가스 2.5근 [고기사랑]	</span>
-                            <img src = "./crawling/product categorized/	중곡_육류_3.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-4">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5069642844"target="_blank">
-                            <span>[광진구 배달] 사골 1.5L [고기사랑]	</span>
-                            <img src = "./crawling/product categorized/	중곡_육류_4.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-4">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5069609979"target="_blank">
-                            <span>[광진구 배달] 돼지주물럭 1근 [고기사랑]	</span>
-                            <img src = "./crawling/product categorized/	중곡_육류_5.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-4">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5069909576"target="_blank">
-                            <span>[광진구 배달] 양념닭갈비 1근 [고기사랑]	</span>
-                            <img src = "./crawling/product categorized/	중곡_육류_6.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-4">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5069586702"target="_blank">
-                            <span>[광진구 배달] LA소갈비 1근 [고기사랑]	</span>
-                            <img src = "./crawling/product categorized/	중곡_육류_7.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-4">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5069916769"target="_blank">
-                            <span>[광진구 배달] 옛날통닭 1마리 [제일닭강정]	</span>
-                            <img src = "./crawling/product categorized/	중곡_육류_8.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-1">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5062188110"target="_blank">
-                            <span>[성북구 배달] 옥수수식빵 1봉 [빵굼터]	</span>
-                            <img src = "./crawling/product categorized/	돈암_먹거리_1.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-1">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5069801524"target="_blank">
-                            <span>[성북구 배달] 핫바 A set(고추, 야채, 소시지) [선녀어묵]	</span>
-                            <img src = "./crawling/product categorized/	돈암_먹거리_2.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-1">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5069881292"target="_blank">
-                            <span>[성북구 배달] 녹두전 1장 [평양오마니집]	</span>
-                            <img src = "./crawling/product categorized/	돈암_먹거리_3.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-1">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5069799181"target="_blank">
-                            <span>[성북구 배달] 호두단팥빵 2개 [빵굼터]	</span>
-                            <img src = "./crawling/product categorized/	돈암_먹거리_4.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-1">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5062208358"target="_blank">
-                            <span>[성북구 배달] 모닝빵 1봉 [빵굼터]	</span>
-                            <img src = "./crawling/product categorized/	돈암_먹거리_5.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-1">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5069808087"target="_blank">
-                            <span>[성북구 배달] 카레 1팩 [서연찬방]	</span>
-                            <img src = "./crawling/product categorized/	돈암_먹거리_6.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-1">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5062188800"target="_blank">
-                            <span>[성북구 배달] 옥수수스틱 2개 [빵굼터]	</span>
-                            <img src = "./crawling/product categorized/	돈암_먹거리_7.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-1">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5062187442"target="_blank">
-                            <span>[성북구 배달] 우유식빵 1봉 [빵굼터]	</span>
-                            <img src = "./crawling/product categorized/	돈암_먹거리_8.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-1">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5069800481"target="_blank">
-                            <span>[성북구 배달] 핫바 B set(치즈, 깻잎, 가래떡) [선녀어묵]	</span>
-                            <img src = "./crawling/product categorized/	돈암_먹거리_9.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-1">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5069814197"target="_blank">
-                            <span>[성북구 배달] 짜장 1팩 [서연찬방]	</span>
-                            <img src = "./crawling/product categorized/	돈암_먹거리_10.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-6">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5069856520"target="_blank">
-                            <span>[성북구 배달] 못난이어묵 400g [선녀어묵]	</span>
-                            <img src = "./crawling/product categorized/	돈암_먹거리_11.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-6">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5069852437"target="_blank">
-                            <span>[성북구 배달] 베이비슈 2개 [빵굼터]	</span>
-                            <img src = "./crawling/product categorized/	돈암_먹거리_12.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-6">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5160297159"target="_blank">
-                            <span>[영등포구 배달] 국내산 참기름 1병 [충북기름집]	</span>
-                            <img src = "./crawling/product categorized/	대림_양념_1.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-6">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5160302323"target="_blank">
-                            <span>[영등포구 배달] 국내산 들기름 1병 [충북기름집]	</span>
-                            <img src = "./crawling/product categorized/	대림_양념_2.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-6">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5160309985"target="_blank">
-                            <span>[영등포구 배달] 국내산 청양초 500g [충북기름집]	</span>
-                            <img src = "./crawling/product categorized/	대림_양념_3.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-6">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5160313567"target="_blank">
-                            <span>[영등포구 배달] 해선장유 1.75L [충북기름집]	</span>
-                            <img src = "./crawling/product categorized/	대림_양념_4.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-6">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5160323776"target="_blank">
-                            <span>[영등포구 배달] 동고일품선 1.2L [충북기름집]	</span>
-                            <img src = "./crawling/product categorized/	대림_양념_5.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-6">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5160316218"target="_blank">
-                            <span>[영등포구 배달] 해선장유 1.28L [충북기름집]	</span>
-                            <img src = "./crawling/product categorized/	대림_양념_6.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-6">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5160307497"target="_blank">
-                            <span>[영등포구 배달] 국내산 태양초 500g [충북기름집]	</span>
-                            <img src = "./crawling/product categorized/	대림_양념_7.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-6">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5060981739"target="_blank">
-                            <span>[영등포구 배달] 하이디라오 마라샹궈소스 (칭유훠궈) [홍운식품]	</span>
-                            <img src = "./crawling/product categorized/	대림_양념_8.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-3">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5176543948"target="_blank">
-                            <span>[영등포구 배달] 씨없는 한입 청포도 1근 [경기과일]	</span>
-                            <img src = "./crawling/product categorized/	대림_과일_1.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-3">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5176555111"target="_blank">
-                            <span>[영등포구 배달] 황금빛 달달한 뉴질랜드 골드키위 10개 [경기과일]	</span>
-                            <img src = "./crawling/product categorized/	대림_과일_2.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-3">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5176553625"target="_blank">
-                            <span>[영등포구 배달] 시원 달달한 수분 가득 꿀수박 대 [경기과일]	</span>
-                            <img src = "./crawling/product categorized/	대림_과일_4.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-3">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5176551178"target="_blank">
-                            <span>[영등포구 배달] 신선하고 맛있는 꿀 부사 중 11개 [경기과일]	</span>
-                            <img src = "./crawling/product categorized/	대림_과일_5.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-3">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5176550311"target="_blank">
-                            <span>[영등포구 배달] 신선하고 맛있는 꿀 부사 특 5개 [경기과일]	</span>
-                            <img src = "./crawling/product categorized/	대림_과일_6.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-3">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5176548499"target="_blank">
-                            <span>[영등포구 배달] 톡 터지는 달콤한 홍시 5개 [경기과일]	</span>
-                            <img src = "./crawling/product categorized/	대림_과일_7.jpg">
-                        </a>
-                    </li>
-                    <li class = "ff-item-type-3">
-                        <a href = "https://shopping.naver.com/market/traditionalmarket/products/5176546295"target="_blank">
-                            <span>[영등포구 배달] 달콤하고 맛있는 델몬트 바나나 1송이 [경기과일]	</span>
-                            <img src = "./crawling/product categorized/	대림_과일_8.jpg">
-                        </a>
-                    </li>
-                </ul>        
-            </section>
-        </div>
+            <ul class = "ff-items" style="position:relative; height:2095px;">
+                <li class = "ff-item-type-1">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5165784500">
+                        <span>[동작구 배달] 핫바 1개 [남성사계 오향한방족발개성]</span>
+                        <img src="./crawling/product categorized/남성_먹거리_17.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-2">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5204197332">
+                        <span>[동작구 배달] 맛깔나게 절인 겉절이 1kg [남성사계 김치백화점]</span>
+                        <img src="./crawling/product categorized/남성_반찬_11.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-2">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5204197332">
+                        <span>[동작구 배달] 맛깔나게 절인 겉절이 1kg [남성사계 김치백화점]</span>
+                        <img src = "./crawling/product categorized/	남성_반찬_11.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-1">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5165784500">
+                        <span>[동작구 배달] 핫바 1개 [남성사계 오향한방족발개성]</span>
+                        <img src = "./crawling/product categorized/	남성_먹거리_17.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-3">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5203836030">
+                        <span>[동작구 배달] 달콤하고 맛좋은 배 1.8kg [남성사계 해돋이청과]</span>
+                        <img src = "./crawling/product categorized/	남성_과일_23.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-6">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5165837527">
+                        <span>[동작구 배달] 국산 참기름 350ml [남성사계 남성고추방앗간]</span>
+                        <img src = "./crawling/product categorized/	남성_양념_29.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-1">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5165779072">
+                        <span>[동작구 배달] 닭발 1팩 [남성사계 오향한방족발개성]</span>
+                        <img src = "./crawling/product categorized/	남성_먹거리_35.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-4">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5247695356">
+                        <span>[은평구 배달] 1+등급 한돈 생갈비 600g [대림 한우마을]</span>
+                        <img src = "./crawling/product categorized/	대림_육류_3.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-1">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5247681633">
+                        <span>[은평구 배달] 우리간식 한과 370g [대림 대림농산물직판장]</span>
+                        <img src = "./crawling/product categorized/	대림_먹거리_1.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-1">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5247755506">
+                        <span>[은평구 배달] 쫄깃한 왕족발 특대 [대림 궁중한방족발]	</span>
+                        <img src = "./crawling/product categorized/	대림_먹거리_2.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-6">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5247789474">
+                        <span>[은평구 배달] 정성이 꽉찬 집된장 1kg [대림 궁중한방족발]</span>
+                        <img src = "./crawling/product categorized/	대림_양념_9.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-4">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5247681633">
+                        <span>[은평구 배달] 1등급 한우 육회 600g [대림 한우마을]	</span>
+                        <img src = "./crawling/product categorized/	대림_육류_4.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-5">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5247653948">
+                        <span>[은평구 배달] 제수용 조기 3마리 [대림 대림농산물직판장]	</span>
+                        <img src = "./crawling/product categorized/	대림_생선_1.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-5">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5242912265">
+                        <span>[은평구 배달] 찰랑찰랑 물미역 200g [대림 대박나물]	</span>
+                        <img src = "./crawling/product categorized/	대림_생선_2.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-5">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5243247408">
+                        <span>"	[은평구 배달] 완도산 다시마 대 [대림 궁중한방족발]	</span>
+                        <img src = "./crawling/product categorized/	대림_생선_3.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-5">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5243245568">
+                        <span>[은평구 배달] 부드럽고 쫄깃한 진도미역 2개 [대림 궁중한방족발]	</span>
+                        <img src = "./crawling/product categorized/	대림_생선_4.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-4">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5234417131">
+                        <span>[동작구 배달] 소등심 불고기용 500g [고기사랑]	</span>
+                        <img src = "./crawling/product categorized/	성대_육류_1.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-4">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5069818567">
+                        <span>[동작구 배달] 부채살 500g [고기사랑]	</span>
+                        <img src = "./crawling/product categorized/	성대_육류_2.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-2">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5063818462">
+                        <span>[송파구배달] 멸치볶음 3종 세트 (잔멸치,고추장멸치,견과류멸치) [석촌 건강한반찬]	</span>
+                        <img src = "./crawling/product categorized/	석촌_반찬_1.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-2">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5063780774">
+                        <span>"	[송파구배달] 오이소박이 1팩 [석촌 건강한반찬]	</span>
+                        <img src = "./crawling/product categorized/	석촌_반찬_2.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-2">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5069809938">
+                        <span>[송파구배달] 차돌된장찌개 2인분 [석촌 건강한반찬]	</span>
+                        <img src = "./crawling/product categorized/	석촌_반찬_3.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-2">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5063775642">
+                        <span>[송파구배달] 제육볶음 1팩 [석촌 건강한반찬]	</span>
+                        <img src = "./crawling/product categorized/	석촌_반찬_4.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-6">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5069675391">
+                        <span>[용산구배달] 된장 700g [명신상회]	</span>
+                        <img src = "./crawling/product categorized/	용문_양념_1.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-6">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5069686384">
+                        <span>[용산구배달] 된장 1.2kg [명신상회]	</span>
+                        <img src = "./crawling/product categorized/	용문_양념_2.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-6">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5060897873">
+                        <span>[용산구배달] 마늘담금고추장 1통 [명신상회]	</span>
+                        <img src = "./crawling/product categorized/	용문_양념_3.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-4">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5069910846">
+                        <span>[광진구 배달] 양념돈가스 1근 [고기사랑]	</span>
+                        <img src = "./crawling/product categorized/	중곡_육류_1.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-4">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5069913003">
+                        <span>[광진구 배달] 양념돈가스 2.5근 [고기사랑]	</span>
+                        <img src = "./crawling/product categorized/	중곡_육류_3.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-4">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5069642844">
+                        <span>[광진구 배달] 사골 1.5L [고기사랑]	</span>
+                        <img src = "./crawling/product categorized/	중곡_육류_4.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-4">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5069609979">
+                        <span>[광진구 배달] 돼지주물럭 1근 [고기사랑]	</span>
+                        <img src = "./crawling/product categorized/	중곡_육류_5.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-4">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5069909576">
+                        <span>[광진구 배달] 양념닭갈비 1근 [고기사랑]	</span>
+                        <img src = "./crawling/product categorized/	중곡_육류_6.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-4">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5069586702">
+                        <span>[광진구 배달] LA소갈비 1근 [고기사랑]	</span>
+                        <img src = "./crawling/product categorized/	중곡_육류_7.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-4">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5069916769">
+                        <span>[광진구 배달] 옛날통닭 1마리 [제일닭강정]	</span>
+                        <img src = "./crawling/product categorized/	중곡_육류_8.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-1">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5062188110">
+                        <span>[성북구 배달] 옥수수식빵 1봉 [빵굼터]	</span>
+                        <img src = "./crawling/product categorized/	돈암_먹거리_1.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-1">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5069801524">
+                        <span>[성북구 배달] 핫바 A set(고추, 야채, 소시지) [선녀어묵]	</span>
+                        <img src = "./crawling/product categorized/	돈암_먹거리_2.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-1">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5069881292">
+                        <span>[성북구 배달] 녹두전 1장 [평양오마니집]	</span>
+                        <img src = "./crawling/product categorized/	돈암_먹거리_3.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-1">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5069799181">
+                        <span>[성북구 배달] 호두단팥빵 2개 [빵굼터]	</span>
+                        <img src = "./crawling/product categorized/	돈암_먹거리_4.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-1">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5062208358">
+                        <span>[성북구 배달] 모닝빵 1봉 [빵굼터]	</span>
+                        <img src = "./crawling/product categorized/	돈암_먹거리_5.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-1">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5069808087">
+                        <span>[성북구 배달] 카레 1팩 [서연찬방]	</span>
+                        <img src = "./crawling/product categorized/	돈암_먹거리_6.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-1">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5062188800">
+                        <span>[성북구 배달] 옥수수스틱 2개 [빵굼터]	</span>
+                        <img src = "./crawling/product categorized/	돈암_먹거리_7.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-1">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5062187442">
+                        <span>[성북구 배달] 우유식빵 1봉 [빵굼터]	</span>
+                        <img src = "./crawling/product categorized/	돈암_먹거리_8.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-1">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5069800481">
+                        <span>[성북구 배달] 핫바 B set(치즈, 깻잎, 가래떡) [선녀어묵]	</span>
+                        <img src = "./crawling/product categorized/	돈암_먹거리_9.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-1">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5069814197">
+                        <span>[성북구 배달] 짜장 1팩 [서연찬방]	</span>
+                        <img src = "./crawling/product categorized/	돈암_먹거리_10.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-6">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5069856520">
+                        <span>[성북구 배달] 못난이어묵 400g [선녀어묵]	</span>
+                        <img src = "./crawling/product categorized/	돈암_먹거리_11.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-6">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5069852437">
+                        <span>[성북구 배달] 베이비슈 2개 [빵굼터]	</span>
+                        <img src = "./crawling/product categorized/	돈암_먹거리_12.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-6">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5160297159">
+                        <span>[영등포구 배달] 국내산 참기름 1병 [충북기름집]	</span>
+                        <img src = "./crawling/product categorized/	대림_양념_1.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-6">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5160302323">
+                        <span>[영등포구 배달] 국내산 들기름 1병 [충북기름집]	</span>
+                        <img src = "./crawling/product categorized/	대림_양념_2.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-6">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5160309985">
+                        <span>[영등포구 배달] 국내산 청양초 500g [충북기름집]	</span>
+                        <img src = "./crawling/product categorized/	대림_양념_3.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-6">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5160313567">
+                        <span>[영등포구 배달] 해선장유 1.75L [충북기름집]	</span>
+                        <img src = "./crawling/product categorized/	대림_양념_4.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-6">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5160323776">
+                        <span>[영등포구 배달] 동고일품선 1.2L [충북기름집]	</span>
+                        <img src = "./crawling/product categorized/	대림_양념_5.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-6">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5160316218">
+                        <span>[영등포구 배달] 해선장유 1.28L [충북기름집]	</span>
+                        <img src = "./crawling/product categorized/	대림_양념_6.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-6">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5160307497">
+                        <span>[영등포구 배달] 국내산 태양초 500g [충북기름집]	</span>
+                        <img src = "./crawling/product categorized/	대림_양념_7.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-6">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5060981739">
+                        <span>[영등포구 배달] 하이디라오 마라샹궈소스 (칭유훠궈) [홍운식품]	</span>
+                        <img src = "./crawling/product categorized/	대림_양념_8.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-3">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5176543948">
+                        <span>[영등포구 배달] 씨없는 한입 청포도 1근 [경기과일]	</span>
+                        <img src = "./crawling/product categorized/	대림_과일_1.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-3">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5176555111">
+                        <span>[영등포구 배달] 황금빛 달달한 뉴질랜드 골드키위 10개 [경기과일]	</span>
+                        <img src = "./crawling/product categorized/	대림_과일_2.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-3">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5176553625">
+                        <span>[영등포구 배달] 시원 달달한 수분 가득 꿀수박 대 [경기과일]	</span>
+                        <img src = "./crawling/product categorized/	대림_과일_4.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-3">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5176551178">
+                        <span>[영등포구 배달] 신선하고 맛있는 꿀 부사 중 11개 [경기과일]	</span>
+                        <img src = "./crawling/product categorized/	대림_과일_5.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-3">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5176550311">
+                        <span>[영등포구 배달] 신선하고 맛있는 꿀 부사 특 5개 [경기과일]	</span>
+                        <img src = "./crawling/product categorized/	대림_과일_6.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-3">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5176548499">
+                        <span>[영등포구 배달] 톡 터지는 달콤한 홍시 5개 [경기과일]	</span>
+                        <img src = "./crawling/product categorized/	대림_과일_7.jpg">
+                    </a>
+                </li>
+                <li class = "ff-item-type-3">
+                    <a href = "https://shopping.naver.com/market/traditionalmarket/products/5176546295">
+                        <span>[영등포구 배달] 달콤하고 맛있는 델몬트 바나나 1송이 [경기과일]	</span>
+                        <img src = "./crawling/product categorized/	대림_과일_8.jpg">
+                    </a>
+                </li>
+            </ul>        
+        </section>
     </body>
 </html>

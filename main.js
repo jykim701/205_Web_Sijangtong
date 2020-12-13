@@ -1,4 +1,3 @@
-
 // 회원 배열 선언
 //[ID, PASSWORD] 형태
 var user = [
@@ -40,8 +39,7 @@ function login() {
        // for (var i = 0; i < user.length; i++) {
             //var id = user.find((item, idx)=>{ return item.ID===paramID;});
             //if (user.find(paramID === user[i][0].ID)) {
-            //if(user.find(idCheck)) {
-           
+            //if(user.find(idCheck)) 
             if(id!=null) {
                 alert("로그인 성공!");
                 return;

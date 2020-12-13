@@ -8,11 +8,11 @@
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <title>점포 찾기</title>
     <script type="text/javascript"
-        src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=24v6o2n0pj&submodules=geocoder"></script>
+        src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=6vjrgbza9u&submodules=geocoder"></script>
     <link type="text/css" rel="stylesheet" href="shop_search.css">
 </head>
 
-<body>
+<body onload="Guselect()">
 
     <div class="header clearfix">
         <nav id="topMenu">
@@ -156,10 +156,10 @@
             
 
             <script>
-                var ohhyang = document.getElementById("ohhyang");
-                ohhyang.onclick = ohhyangclick;
+                var ddung = document.getElementById("ddung");
+                ddung.onclick = ddungclick;
 
-                function ohhyangclick() {
+                function ddungclick() {
                     
                     var map = new naver.maps.Map("map", {
                         center: new naver.maps.LatLng(37.4884438,126.9782362), // 좌표를 .csv로부터 가져와야하는데...
@@ -171,11 +171,12 @@
                         position: new naver.maps.LatLng(37.4884438,126.9782362),
                         map: map
                     });
-                    document.getElementById("shopname").innerHTML = "<span>오향한방족발<span>"
+                    document.getElementById("shopname").innerHTML = "<span>뚱땡이족발<span>"
                     document.getElementById("shopaddress").innerHTML = "<span>서울 동작구 동작대로29나길 9<span>";
-                    document.getElementById("shopphoto").innerHTML = "<img src='crawling/점포 대표 사진/오향한방족발개성.jpeg'>"
-                    document.getElementById("shopnumber").innerHTML = "<span>02-535-3233<span>"
-                    document.getElementById("shopitemlist").innerHTML = "<a id='1' href='https://shopping.naver.com/market/traditionalmarket/products/5165784500' target='_blank'>핫바 1개</a> <a id='2' href='https://shopping.naver.com/market/traditionalmarket/products/5165784500' target='_blank'>족발(중)</a> <a id='3' href='https://shopping.naver.com/market/traditionalmarket/products/5165784500' target='_blank'>족발(대)</a>"
+                    document.getElementById("shopphoto").innerHTML = "<img src='crawling/점포 대표 사진/뚱땡이족발.jpeg'>"
+                    document.getElementById("shopnumber").innerHTML = "<span>0507-1436-6606<span>"
+                    document.getElementById("shopitemlist").innerHTML = "<a id='1' href='#'>족발(소)</a> <a id='2' href='#'>족발(중)</a> <a id='3' href='#'>족발(대)</a>\
+                    <a id='4' href='#'>보쌈(소)</a> <a id='5' href='#'>보쌈(중)</a> <a id='5' href='#'>보쌈(대)</a>"
                     document.getElementById("shopreview").innerHTML = "<a id='1' href='#'>?</a> <a id='2' href='#'>?</a> <a id='3' href='#'>?</a>\
                     <a id='4' href='#'>?</a> <a id='5' href='#'>?</a> <a id='5' href='#'>?</a>"
                 }
@@ -201,20 +202,52 @@
                     document.getElementById("shopaddress").innerHTML = "<span>서울 동작구 동작대로29가길 26<span>";
                     document.getElementById("shopphoto").innerHTML = "<img src='crawling/점포 대표 사진/삼정유통.jpeg'>"
                     document.getElementById("shopnumber").innerHTML = "<span>02-599-6044<span>"
-                    document.getElementById("shopitemlist").innerHTML = "<a id='1' href='https://shopping.naver.com/market/traditionalmarket/products/5165716658?NaPm=ct%3Dkin2h516%7Cci%3Dshoppingwindow%7Ctr%3Dmart%7Chk%3D96cab8a73ff2f627b9dd9961a4762fe7642e11e5%7Ctrx%3D' target='_blank'>밀떡복이 1kg</a> <a id='2' href='https://shopping.naver.com/market/traditionalmarket/products/5165768218?NaPm=ct%3Dkin2j968%7Cci%3Dshoppingwindow%7Ctr%3Dmart%7Chk%3Dbb8f30cc11290b33f97e4a94dd9ab41bb256b43d%7Ctrx%3D' target='_blank'>즉석돌김</a> <a id='3' href='https://shopping.naver.com/market/traditionalmarket/products/5165784500' target='_blank'>국물용 멸치 1kg</a>"
+                    document.getElementById("shopitemlist").innerHTML = "<a id='1' href='#'>떡볶이떡</a> <a id='2' href='#'>국물용멸치</a> <a id='3' href='#'>김밥용김</a>"
                     document.getElementById("shopreview").innerHTML = "<a id='1' href='#'>?</a> <a id='2' href='#'>?</a> <a id='3' href='#'>?</a>\
                     <a id='4' href='#'>?</a> <a id='5' href='#'>?</a> <a id='5' href='#'>?</a>"
                 }
             </script>
 
 
+            <script>
+                function Guselect(){
+                    
+                }
+            </script>
+
+
+
+
+
+            <!-- 
+            <script> // 추후에 .csv를 읽어와 각 값을 배열에 넣어줄 스크립트...
+                var shopname = "";
+                var shopadress = "";
+                var shopnumber = "";
+                var shopitemlist = "";
+                var shopreview = "";
+
+                function changeText() {
+                    if (this.innerText == "More") { // check if text inside is "More"
+                        this.innerText == "Less";    // If so, change to "Less"
+                    }
+                    else {
+                        this.innerText == "More";
+                    }
+                }
+            </script>
+ -->
+
         </div>
     </section>
 
+    <!-- 지도 출력 -->
     <aside class="aside">
         <div id="map" style="width:70%;height:100%;"></div>
     </aside>
 
+    <!-- 아래 코드는 예제! -->
+    <!-- https://navermaps.github.io/maps.js.ncp/docs/tutorial-3-geocoder-geocoding.example.html -->
 
 </body>
 

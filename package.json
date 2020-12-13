@@ -23,7 +23,7 @@
     "connect": "^1.8.5",
     "connect_router": "^1.8.7",
     "cookie-parser": "~1.4.3",
-    "debug": "~2.6.3",
+    "debug": "^2.6.9",
     "ejs": "~2.5.6",
     "expres": "0.0.5",
     "express": "^4.17.1",

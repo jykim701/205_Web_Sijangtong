@@ -22,11 +22,11 @@
         <nav id="topMenu">
             <a href="./main.html"><img src="./image/logo.png" alt="logo" class="homeIcon"></a>
             <ul>
-                <li><a class="menuLink" href="#">점포 찾기</a></li>
-                <li><a class="menuLink" href="#">상품 찾기</a></li>
+                <li><a class="menuLink" href="./shop_search.html">점포 찾기</a></li>
+                <li><a class="menuLink" href="./product.html">상품 찾기</a></li>
                 <li><a class="menuLink" href="./market_review.html">시장 후기</a></li>
                 <li><a class="menuLink" href="./market_promotion.html">시장 홍보</a></li>
-                <li><a class="menuLink selected_menu" href="./mypage.html">My Page</a></li>
+                <li><a class="menuLink" href="./mypage.html">My Page</a></li>
             </ul>
         </nav>
     </div>
@@ -36,8 +36,16 @@
         <nav id="mypageMenu">
             <ul>
                 <li><a class="userMenuLink" href="#">기본 정보</a></li>
-                <li><a class="userMenuLink" href="#">정보 수정하기</a></li>
-                <li><a class="userMenuLink" href="#">회원 탈퇴하기</a></li>
+                <li><a class="userMenuLink" onclick="info_modify();">정보 수정하기</a></li>
+                <li><a class="userMenuLink" onclick="user_delete();">회원 탈퇴하기</a></li>
+                <script>
+                    function info_modify() {
+                        alert("정보를 수정하시겠습니까?");
+                    }
+                    function user_delete() {
+                        alert("회원을 탈퇴하시겠습니까?");
+                    }
+                </script>
             </ul>
         </nav>
     </div>

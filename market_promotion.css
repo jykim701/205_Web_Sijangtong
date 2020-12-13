@@ -192,7 +192,11 @@
     overflow: hidden;
     position: relative;
     height: 322px;
+<<<<<<< HEAD
     cursor:pointer;
+=======
+    cursor: pointer;
+>>>>>>> d410075f525225931c62a378b20663634c080aff
 }
 
 .market_inner{
@@ -240,7 +244,7 @@ dt{
         display: block;
         color: lightgrey;
         background-color: black;
-        font-size: large;        
+        font-size: 1.5em;        
 }
 dd {
     display: block;

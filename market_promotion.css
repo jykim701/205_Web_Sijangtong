@@ -192,6 +192,7 @@
     overflow: hidden;
     position: relative;
     height: 322px;
+    cursor:pointer;
 }
 
 .market_inner{

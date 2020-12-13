@@ -5,7 +5,7 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "node node.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,14 +19,17 @@
   },
   "homepage": "https://github.com/jykim701/205_Web_Sijangtong#readme",
   "dependencies": {
-    "body-parser": "~1.17.1",
+    "body-parser": "^1.17.2",
+    "connect": "^1.8.5",
+    "connect_router": "^1.8.7",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.3",
     "ejs": "~2.5.6",
     "expres": "0.0.5",
     "express": "^4.17.1",
+    "express-session": "^1.17.1",
     "mongodb": "^3.6.3",
-    "mongoose": "^5.11.5",
+    "mongoose": "^5.11.7",
     "morgan": "~1.8.1",
     "serve-favicon": "~2.4.2"
   },
